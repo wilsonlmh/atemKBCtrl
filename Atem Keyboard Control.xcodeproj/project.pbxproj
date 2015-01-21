@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B825B61A6FBA57003E32A2 /* blueButton.png */; };
+		C8B825B91A6FE117003E32A2 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C8B825B81A6FE117003E32A2 /* icon.icns */; };
+		C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */; };
+		C8BC035D1A6AA6BA00D26560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035C1A6AA6BA00D26560 /* main.m */; };
+		C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BC035E1A6AA6BA00D26560 /* Images.xcassets */; };
+		C8BC036E1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC036D1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m */; };
+		C8BC03B21A6ABB2100D26560 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8BC03B01A6ABB2100D26560 /* MainMenu.xib */; };
+		C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BC03B81A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp */; };
+		C8D712BF1A6EE206005BC2F9 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BA1A6EE206005BC2F9 /* blackButton.png */; };
+		C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BB1A6EE206005BC2F9 /* greenButton.png */; };
+		C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BC1A6EE206005BC2F9 /* normalButton.png */; };
+		C8D712C21A6EE206005BC2F9 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BD1A6EE206005BC2F9 /* redButton.png */; };
+		C8D712C31A6EE206005BC2F9 /* yellowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BE1A6EE206005BC2F9 /* yellowButton.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8BC03681A6AA6BA00D26560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8BC034C1A6AA6BA00D26560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8BC03531A6AA6BA00D26560;
+			remoteInfo = "Atem Keyboard Control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8B825B61A6FBA57003E32A2 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueButton.png; path = images/blueButton.png; sourceTree = "<group>"; };
+		C8B825B81A6FE117003E32A2 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		C8BC03541A6AA6BA00D26560 /* Atem Keyboard Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atem Keyboard Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8BC03581A6AA6BA00D26560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BC03591A6AA6BA00D26560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		C8BC035C1A6AA6BA00D26560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C8BC035E1A6AA6BA00D26560 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C8BC03671A6AA6BA00D26560 /* Atem Keyboard ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atem Keyboard ControlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8BC036C1A6AA6BA00D26560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BC036D1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Atem_Keyboard_ControlTests.m; sourceTree = "<group>"; };
+		C8BC03B11A6ABB2100D26560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C8BC03B71A6BEC0600D26560 /* BMDSwitcherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDSwitcherAPI.h; sourceTree = "<group>"; };
+		C8BC03B81A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BMDSwitcherAPIDispatch.cpp; sourceTree = "<group>"; };
+		C8D712BA1A6EE206005BC2F9 /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
+		C8D712BB1A6EE206005BC2F9 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
+		C8D712BC1A6EE206005BC2F9 /* normalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalButton.png; sourceTree = "<group>"; };
+		C8D712BD1A6EE206005BC2F9 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		C8D712BE1A6EE206005BC2F9 /* yellowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowButton.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8BC03511A6AA6BA00D26560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BC03641A6AA6BA00D26560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8BC034B1A6AA6BA00D26560 = {
+			isa = PBXGroup;
+			children = (
+				C8BC03771A6AA73800D26560 /* Resources */,
+				C8BC03561A6AA6BA00D26560 /* Atem Keyboard Control */,
+				C8BC036A1A6AA6BA00D26560 /* Atem Keyboard ControlTests */,
+				C8BC03551A6AA6BA00D26560 /* Products */,
+				C8BC03B61A6BEC0600D26560 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C8BC03551A6AA6BA00D26560 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC03541A6AA6BA00D26560 /* Atem Keyboard Control.app */,
+				C8BC03671A6AA6BA00D26560 /* Atem Keyboard ControlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8BC03561A6AA6BA00D26560 /* Atem Keyboard Control */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC03591A6AA6BA00D26560 /* AppDelegate.h */,
+				C8BC03B01A6ABB2100D26560 /* MainMenu.xib */,
+				C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */,
+				C8BC035E1A6AA6BA00D26560 /* Images.xcassets */,
+				C8BC03571A6AA6BA00D26560 /* Supporting Files */,
+			);
+			path = "Atem Keyboard Control";
+			sourceTree = "<group>";
+		};
+		C8BC03571A6AA6BA00D26560 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC03581A6AA6BA00D26560 /* Info.plist */,
+				C8BC035C1A6AA6BA00D26560 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8BC036A1A6AA6BA00D26560 /* Atem Keyboard ControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC036D1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m */,
+				C8BC036B1A6AA6BA00D26560 /* Supporting Files */,
+			);
+			path = "Atem Keyboard ControlTests";
+			sourceTree = "<group>";
+		};
+		C8BC036B1A6AA6BA00D26560 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC036C1A6AA6BA00D26560 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8BC03771A6AA73800D26560 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C8B825B61A6FBA57003E32A2 /* blueButton.png */,
+				C8BC03781A6AA73800D26560 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C8BC03781A6AA73800D26560 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C8B825B81A6FE117003E32A2 /* icon.icns */,
+				C8D712BA1A6EE206005BC2F9 /* blackButton.png */,
+				C8D712BB1A6EE206005BC2F9 /* greenButton.png */,
+				C8D712BC1A6EE206005BC2F9 /* normalButton.png */,
+				C8D712BD1A6EE206005BC2F9 /* redButton.png */,
+				C8D712BE1A6EE206005BC2F9 /* yellowButton.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		C8BC03B61A6BEC0600D26560 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8BC03B71A6BEC0600D26560 /* BMDSwitcherAPI.h */,
+				C8BC03B81A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8BC03531A6AA6BA00D26560 /* Atem Keyboard Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8BC03711A6AA6BA00D26560 /* Build configuration list for PBXNativeTarget "Atem Keyboard Control" */;
+			buildPhases = (
+				C8BC03501A6AA6BA00D26560 /* Sources */,
+				C8BC03511A6AA6BA00D26560 /* Frameworks */,
+				C8BC03521A6AA6BA00D26560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Atem Keyboard Control";
+			productName = "Atem Keyboard Control";
+			productReference = C8BC03541A6AA6BA00D26560 /* Atem Keyboard Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8BC03661A6AA6BA00D26560 /* Atem Keyboard ControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8BC03741A6AA6BA00D26560 /* Build configuration list for PBXNativeTarget "Atem Keyboard ControlTests" */;
+			buildPhases = (
+				C8BC03631A6AA6BA00D26560 /* Sources */,
+				C8BC03641A6AA6BA00D26560 /* Frameworks */,
+				C8BC03651A6AA6BA00D26560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8BC03691A6AA6BA00D26560 /* PBXTargetDependency */,
+			);
+			name = "Atem Keyboard ControlTests";
+			productName = "Atem Keyboard ControlTests";
+			productReference = C8BC03671A6AA6BA00D26560 /* Atem Keyboard ControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8BC034C1A6AA6BA00D26560 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Luniz Pd.";
+				TargetAttributes = {
+					C8BC03531A6AA6BA00D26560 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C8BC03661A6AA6BA00D26560 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C8BC03531A6AA6BA00D26560;
+					};
+				};
+			};
+			buildConfigurationList = C8BC034F1A6AA6BA00D26560 /* Build configuration list for PBXProject "Atem Keyboard Control" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8BC034B1A6AA6BA00D26560;
+			productRefGroup = C8BC03551A6AA6BA00D26560 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8BC03531A6AA6BA00D26560 /* Atem Keyboard Control */,
+				C8BC03661A6AA6BA00D26560 /* Atem Keyboard ControlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8BC03521A6AA6BA00D26560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */,
+				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
+				C8D712BF1A6EE206005BC2F9 /* blackButton.png in Resources */,
+				C8D712C31A6EE206005BC2F9 /* yellowButton.png in Resources */,
+				C8BC03B21A6ABB2100D26560 /* MainMenu.xib in Resources */,
+				C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */,
+				C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */,
+				C8D712C21A6EE206005BC2F9 /* redButton.png in Resources */,
+				C8B825B91A6FE117003E32A2 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BC03651A6AA6BA00D26560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8BC03501A6AA6BA00D26560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BC035D1A6AA6BA00D26560 /* main.m in Sources */,
+				C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */,
+				C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BC03631A6AA6BA00D26560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BC036E1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8BC03691A6AA6BA00D26560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8BC03531A6AA6BA00D26560 /* Atem Keyboard Control */;
+			targetProxy = C8BC03681A6AA6BA00D26560 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C8BC03B01A6ABB2100D26560 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8BC03B11A6ABB2100D26560 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8BC036F1A6AA6BA00D26560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C8BC03701A6AA6BA00D26560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C8BC03721A6AA6BA00D26560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Atem Keyboard Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8BC03731A6AA6BA00D26560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Atem Keyboard Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C8BC03751A6AA6BA00D26560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Atem Keyboard ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atem Keyboard Control.app/Contents/MacOS/Atem Keyboard Control";
+			};
+			name = Debug;
+		};
+		C8BC03761A6AA6BA00D26560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Atem Keyboard ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Atem Keyboard Control.app/Contents/MacOS/Atem Keyboard Control";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8BC034F1A6AA6BA00D26560 /* Build configuration list for PBXProject "Atem Keyboard Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8BC036F1A6AA6BA00D26560 /* Debug */,
+				C8BC03701A6AA6BA00D26560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8BC03711A6AA6BA00D26560 /* Build configuration list for PBXNativeTarget "Atem Keyboard Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8BC03721A6AA6BA00D26560 /* Debug */,
+				C8BC03731A6AA6BA00D26560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8BC03741A6AA6BA00D26560 /* Build configuration list for PBXNativeTarget "Atem Keyboard ControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8BC03751A6AA6BA00D26560 /* Debug */,
+				C8BC03761A6AA6BA00D26560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8BC034C1A6AA6BA00D26560 /* Project object */;
+}
