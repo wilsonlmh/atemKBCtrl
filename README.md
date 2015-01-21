@@ -1,5 +1,4 @@
-# atemKBCtrl
-ATEM Keyboard Control
+# ATEM Keyboard Control
 
 to do list:
 
