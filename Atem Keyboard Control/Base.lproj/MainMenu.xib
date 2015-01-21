@@ -47,6 +47,7 @@
                 <outlet property="buttonTRANSPreview" destination="qzw-aQ-gBK" id="kQd-ng-IfR"/>
                 <outlet property="buttonTRANSWipe" destination="1fa-ER-TTe" id="S2C-Zp-BIC"/>
                 <outlet property="logTextArea" destination="N6Y-CN-0wZ" id="rMt-9g-etu"/>
+                <outlet property="preBG" destination="Zkb-od-M9z" id="8Io-12-Tw4"/>
                 <outlet property="sliderTRANS" destination="eoe-1g-eSO" id="6M4-2Y-SAc"/>
                 <outlet property="textDSK1Auto" destination="T2t-1I-NJX" id="dw2-JG-a98"/>
                 <outlet property="textDSK1Duration" destination="DBe-jH-ICg" id="bic-8T-oPY"/>
