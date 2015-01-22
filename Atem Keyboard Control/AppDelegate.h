@@ -95,6 +95,7 @@ class DSKMonitor;
     IBOutlet NSTextField*	textTRANSAuto;
     IBOutlet NSTextField*	textTRANSCut;
     IBOutlet NSTextField*	textTRANSPreview;
+    IBOutlet NSTextField*   textTRANSDuration;
     IBOutlet NSTextField*	textTRANSMix;
     IBOutlet NSTextField*	textTRANSDip;
     IBOutlet NSTextField*	textTRANSWipe;
@@ -145,6 +146,7 @@ class DSKMonitor;
         bool Connected;
         __unsafe_unretained NSString* IP;
         __unsafe_unretained NSString* Name;
+        int frameRate;
         BMDSwitcherInputId Black; //typdef int64_t BMDSwitcherInputId
         BMDSwitcherInputId Ch1;
         BMDSwitcherInputId Ch2;
@@ -170,7 +172,7 @@ class DSKMonitor;
         bool DSK2On;
         uint32_t DSK2RollingFrames; // <0:Not rolling
         uint32_t DSK2Duration;
-        //{false,@"192.168.2.250",@"",0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
+        //{false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
 
     }mixerCurrentStatus;
     
@@ -179,12 +181,15 @@ class DSKMonitor;
 //@property (assign) IBOutlet NSWindow *window;
 
 //UI IBAction Methods
-- (IBAction)clickedUIMappingButton:(id)sender;
-- (IBAction)changeUIMappingTransitionSlider:(id)sender;
-- (IBAction)clickedUIClearLogs:(id)sender;
-- (IBAction)clickedUIToggleAction:(id)sender;
-- (IBAction)clickedReverseSlider:(id)sernder;
-- (IBAction)clickedChangeIP:(id)sender;
+-(IBAction)clickedUIMappingButton:(id)sender;
+-(IBAction)changeUIMappingTransitionSlider:(id)sender;
+-(IBAction)clickedUIClearLogs:(id)sender;
+-(IBAction)clickedUIToggleAction:(id)sender;
+-(IBAction)clickedReverseSlider:(id)sender;
+-(IBAction)clickedChangeIP:(id)sender;
+-(IBAction)clickedUpArraow:(NSButton*)sender;
+-(IBAction)clickedDownArraow:(NSButton*)sender;
+-(IBAction)changedDuration:(NSTextField*)sender;
 
 
 //ATEM Methods
@@ -192,7 +197,8 @@ class DSKMonitor;
 -(void)mixerDisconnected;
 -(void)connectMixer;
 -(void)updateMixerCurrentStatus;
-
+-(int)nsStringDurationToInt:(NSString*)duration;
+-(NSString*)intDurationToNSString:(int)duration;
 
 //UI <-> AppDelegate Methods
 -(void)toggleMouseMonitor;
@@ -205,7 +211,7 @@ class DSKMonitor;
 -(void)triggerKB:(int)keyCode isDown:(bool)isDown;
 -(void)executeCmd:(NSString*)shortName;
 -(void)toggleKeyListening:(int)type;
--(void)appLog:(NSString*)content;
+//-(void)appLog:(NSString*)content;
 
 
 @end

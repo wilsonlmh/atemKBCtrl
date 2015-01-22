@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AC1A70F8BD001E6D25 /* topBar.png */; };
+		C84800AF1A70FD00001E6D25 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AE1A70FD00001E6D25 /* bar.png */; };
+		C84800B21A710261001E6D25 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B01A710261001E6D25 /* downArrow.png */; };
+		C84800B31A710261001E6D25 /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B11A710261001E6D25 /* upArrow.png */; };
 		C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B825B61A6FBA57003E32A2 /* blueButton.png */; };
-		C8B825B91A6FE117003E32A2 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C8B825B81A6FE117003E32A2 /* icon.icns */; };
 		C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */; };
 		C8BC035D1A6AA6BA00D26560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035C1A6AA6BA00D26560 /* main.m */; };
 		C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8BC035E1A6AA6BA00D26560 /* Images.xcassets */; };
@@ -33,8 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C84800AC1A70F8BD001E6D25 /* topBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBar.png; sourceTree = "<group>"; };
+		C84800AE1A70FD00001E6D25 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		C84800B01A710261001E6D25 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		C84800B11A710261001E6D25 /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
 		C8B825B61A6FBA57003E32A2 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueButton.png; path = images/blueButton.png; sourceTree = "<group>"; };
-		C8B825B81A6FE117003E32A2 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		C8BC03541A6AA6BA00D26560 /* Atem Keyboard Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atem Keyboard Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BC03581A6AA6BA00D26560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8BC03591A6AA6BA00D26560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,7 +148,10 @@
 		C8BC03781A6AA73800D26560 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				C8B825B81A6FE117003E32A2 /* icon.icns */,
+				C84800AE1A70FD00001E6D25 /* bar.png */,
+				C84800B01A710261001E6D25 /* downArrow.png */,
+				C84800B11A710261001E6D25 /* upArrow.png */,
+				C84800AC1A70F8BD001E6D25 /* topBar.png */,
 				C8D712BA1A6EE206005BC2F9 /* blackButton.png */,
 				C8D712BB1A6EE206005BC2F9 /* greenButton.png */,
 				C8D712BC1A6EE206005BC2F9 /* normalButton.png */,
@@ -242,14 +251,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */,
+				C84800AF1A70FD00001E6D25 /* bar.png in Resources */,
 				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
+				C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */,
+				C84800B21A710261001E6D25 /* downArrow.png in Resources */,
 				C8D712BF1A6EE206005BC2F9 /* blackButton.png in Resources */,
 				C8D712C31A6EE206005BC2F9 /* yellowButton.png in Resources */,
 				C8BC03B21A6ABB2100D26560 /* MainMenu.xib in Resources */,
 				C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */,
 				C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */,
+				C84800B31A710261001E6D25 /* upArrow.png in Resources */,
 				C8D712C21A6EE206005BC2F9 /* redButton.png in Resources */,
-				C8B825B91A6FE117003E32A2 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

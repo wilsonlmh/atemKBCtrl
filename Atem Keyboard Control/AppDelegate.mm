@@ -251,8 +251,7 @@ public:
     
     HRESULT STDMETHODCALLTYPE	Disconnected(void)
     {
-        //
-        //[mUiDelegate performSelectorOnMainThread:@selector(mixerDisconnected) withObject:nil waitUntilDone:YES];
+        
         return S_OK;
     }
     
@@ -376,7 +375,7 @@ private:
     isKBControlling = false;
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
-    mixerCurrentStatus = {false,@"",@"",0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
     {
         kbShortName[0]=@"a";
         kbShortName[11]=@"b";
@@ -480,7 +479,7 @@ private:
     mSwitcherDiscovery = CreateBMDSwitcherDiscoveryInstance();
     if (!mSwitcherDiscovery)
     {
-        [self appLog:@"Cannot create mSwitcherDiscovery instance!"];
+        NSLog(@"Cannot create mSwitcherDiscovery instance!");
     }
     
     [self updateKBMappings];
@@ -490,7 +489,7 @@ private:
 -(void)setupUI {
     textInput.stringValue = @"";
     textKB.hidden = true;
-    window.backgroundColor = [NSColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
+    window.backgroundColor = [NSColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1];
     logTextArea.textColor = [NSColor whiteColor];
     preBG.hidden = true;
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
@@ -951,10 +950,10 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     
 }
 
--(void)appLog:(NSString*)content {
+/*-(void)appLog:(NSString*)content {
     logTextArea.string = [logTextArea.string stringByAppendingString:content];
     logTextArea.string = [logTextArea.string stringByAppendingString:@"\n"];
-}
+}*/
 
 -(void)toggleAllMappingKBNameTextField {
     if (isKBControlling) {
@@ -980,6 +979,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textTRANSAuto.enabled = false;
         textTRANSCut.enabled = false;
         textTRANSPreview.enabled = false;
+        textTRANSDuration.enabled = false;
         textTRANSMix.enabled = false;
         textTRANSDip.enabled = false;
         textTRANSWipe.enabled = false;
@@ -987,9 +987,11 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textDSK1Preview.enabled = false;
         textDSK1On.enabled = false;
         textDSK1Auto.enabled = false;
+        textDSK1Duration.enabled = false;
         textDSK2Preview.enabled = false;
         textDSK2On.enabled = false;
         textDSK2Auto.enabled = false;
+        textDSK2Duration.enabled = false;
     } else {
         textPGMBlack.enabled = true;
         textPGMCh1.enabled = true;
@@ -1013,6 +1015,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textTRANSAuto.enabled = true;
         textTRANSCut.enabled = true;
         textTRANSPreview.enabled = true;
+        textTRANSDuration.enabled = true;
         textTRANSMix.enabled = true;
         textTRANSDip.enabled = true;
         textTRANSWipe.enabled = true;
@@ -1020,9 +1023,11 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textDSK1Preview.enabled = true;
         textDSK1On.enabled = true;
         textDSK1Auto.enabled = true;
+        textDSK1Duration.enabled = true;
         textDSK2Preview.enabled = true;
         textDSK2On.enabled = true;
         textDSK2Auto.enabled = true;
+        textDSK2Duration.enabled = true;
     }
 }
 
@@ -1048,7 +1053,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 }
 
 - (IBAction)clickedUIClearLogs:(NSButton*)sender {
-    [logTextArea setString:@""];
+    //[logTextArea setString:@""];
 }
 
 - (IBAction)clickedUIToggleAction:(NSButton*)sender {
@@ -1080,12 +1085,91 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [self mixerDisconnected];
 }
 
-/*- (void) relaunch
-{
-    [[NSWorkspace sharedWorkspace] launchApplication:[NSString stringWithUTF8String:executablePath]];
-    [NSApp terminate:self];
-}*/
+- (IBAction)clickedUpArraow:(NSButton*)sender {
+    if (mixerCurrentStatus.Connected) {
+        void (^selectedCase)() = @{
+                                   @"DSK1": ^{
+                                       if ((mixerCurrentStatus.DSK1RollingFrames == mixerCurrentStatus.DSK1Duration) && (mixerCurrentStatus.DSK1Duration > 0)){
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 0); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(mixerCurrentStatus.DSK1Duration+1);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"DSK2": ^{
+                                       if ((mixerCurrentStatus.DSK2RollingFrames == mixerCurrentStatus.DSK2Duration) && (mixerCurrentStatus.DSK2Duration > 0)){
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 1); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(mixerCurrentStatus.DSK2Duration+1);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"TRANS": ^{
+                                   },
+                                   }[sender.alternateTitle];
+        if (selectedCase !=nil) selectedCase();
+    }
 
+}
+
+- (IBAction)clickedDownArraow:(NSButton*)sender {
+    if (mixerCurrentStatus.Connected) {
+        void (^selectedCase)() = @{
+                                   @"DSK1": ^{
+                                       if ((mixerCurrentStatus.DSK1RollingFrames == mixerCurrentStatus.DSK1Duration) && (mixerCurrentStatus.DSK1Duration > 0)) {
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 0); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(mixerCurrentStatus.DSK1Duration-1);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"DSK2": ^{
+                                       if ((mixerCurrentStatus.DSK2RollingFrames == mixerCurrentStatus.DSK2Duration) && (mixerCurrentStatus.DSK2Duration > 0)){
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 1); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(mixerCurrentStatus.DSK2Duration-1);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"TRANS": ^{
+                                   },
+                                   }[sender.alternateTitle];
+        if (selectedCase !=nil) selectedCase();
+    }
+}
+
+-(IBAction)changedDuration:(NSTextField*)sender {
+    if (mixerCurrentStatus.Connected) {
+        int convertedDuration = [self nsStringDurationToInt:sender.stringValue];
+        void (^selectedCase)() = @{
+                                   @"DSK1": ^{
+                                       if (convertedDuration > 0) {
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 0); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(convertedDuration);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"DSK2": ^{
+                                       if (convertedDuration > 0) {
+                                           std::list<IBMDSwitcherDownstreamKey*>::iterator iter = mDSK.begin();
+                                           std::advance(iter, 1); // t-1
+                                           IBMDSwitcherDownstreamKey* key = *iter;
+                                           key->SetRate(convertedDuration);
+                                           key=NULL;
+                                       }
+                                   },
+                                   @"TRANS": ^{
+                                   },
+                                   }[[[sender cell] placeholderString]];
+        if (selectedCase !=nil) selectedCase();
+    }
+}
 
 -(void)updateMixerCurrentStatus {
     if (mixerCurrentStatus.Connected) {
@@ -1121,12 +1205,48 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         BMDSwitcherInputId PRV;
         BMDSwitcherTransitionStyle NTRANS;
         BMDSwitcherTransitionStyle CTRANS;
-        
+        BMDSwitcherVideoMode VM;
+
         mMixEffectBlock->GetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, &PGM);
         mMixEffectBlock->GetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, &PRV);
         mMixEffectBlock->GetFlag(bmdSwitcherMixEffectBlockPropertyIdPreviewTransition, &mixerCurrentStatus.TRANSPreviewing);
         mTransitionParameters->GetNextTransitionStyle(&NTRANS);
         mTransitionParameters->GetTransitionStyle(&CTRANS);
+        mSwitcher->GetVideoMode(&VM);
+        
+        switch (VM) {
+            case bmdSwitcherVideoMode1080i50:
+            case bmdSwitcherVideoMode1080p25:
+            case bmdSwitcherVideoMode4KHDp25:
+            case bmdSwitcherVideoMode625i50Anamorphic:
+            case bmdSwitcherVideoMode625i50PAL:
+                mixerCurrentStatus.frameRate = 25;
+                break;
+            case bmdSwitcherVideoMode1080i5994:
+            case bmdSwitcherVideoMode1080p2997:
+            case bmdSwitcherVideoMode525i5994Anamorphic:
+            case bmdSwitcherVideoMode525i5994NTSC:
+            case bmdSwitcherVideoMode4KHDp2997:
+                mixerCurrentStatus.frameRate = 30;
+                break;
+            case bmdSwitcherVideoMode1080p24:
+            case bmdSwitcherVideoMode1080p2398:
+            case bmdSwitcherVideoMode4KHDp2398:
+            case bmdSwitcherVideoMode4KHDp24:
+                mixerCurrentStatus.frameRate = 24;
+                break;
+            case bmdSwitcherVideoMode1080p50:
+            case bmdSwitcherVideoMode720p50:
+                mixerCurrentStatus.frameRate = 50;
+                break;
+            case bmdSwitcherVideoMode720p5994:
+            case bmdSwitcherVideoMode1080p5994:
+                mixerCurrentStatus.frameRate = 60;
+                break;
+                
+            default:
+                break;
+        }
         
         if (PRV == mixerCurrentStatus.Black) {
             mixerCurrentStatus.PRVCh = 0;
@@ -1217,11 +1337,36 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         key->GetRate(&mixerCurrentStatus.DSK2Duration);
         key = NULL;
         
+        
     } else {
         //Honestly, nothing need to do
         
     }
     [self performSelectorOnMainThread:@selector(updateUIbetweenMixer) withObject:nil waitUntilDone:YES];
+}
+
+-(int)nsStringDurationToInt:(NSString*)duration{
+    int ret=0;
+    if (duration) {
+        NSArray *a = [duration componentsSeparatedByString:@":"];
+        if (a.count == 1) {
+            ret = [[a objectAtIndex:0] intValue] * mixerCurrentStatus.frameRate;
+        } else if (a.count == 2) {
+            ret = [[a objectAtIndex:0] intValue] * mixerCurrentStatus.frameRate + [[a objectAtIndex:1] intValue];
+        }
+    }
+    return ret;
+}
+
+-(NSString*)intDurationToNSString:(int)duration {
+    NSString* ret=@"";
+    if ((duration >= 0) && (mixerCurrentStatus.frameRate != 0)){
+        int s,f;
+        s = duration / mixerCurrentStatus.frameRate;
+        f = duration - (s*mixerCurrentStatus.frameRate);
+        ret = [NSString stringWithFormat:@"%d:%02d",s,f];
+    }
+    return ret;
 }
 
 -(void)mixerDisconnected {
@@ -1276,7 +1421,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         CFStringRef productName;
         if (FAILED(mSwitcher->GetProductName(&productName)))
         {
-            NSLog(@"Could not get switcher product name");
             return;
         }
         
@@ -1362,7 +1506,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                        ^(void){
                            [self performSelectorInBackground:@selector(mixerDisconnected) withObject:nil];
-                            //[self mixerDisconnected];
                        });
     }
 }
@@ -1566,6 +1709,9 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         }
         if (mixerCurrentStatus.DSK1Duration != mixerCurrentStatus.DSK1RollingFrames) {
             buttonDSK1Auto.image = redImage;
+            textDSK1Duration.stringValue = [self intDurationToNSString:mixerCurrentStatus.DSK1RollingFrames];
+        } else {
+            textDSK1Duration.stringValue = [self intDurationToNSString:mixerCurrentStatus.DSK1Duration];
         }
         
         //DSK2
@@ -1577,6 +1723,9 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         }
         if (mixerCurrentStatus.DSK2Duration != mixerCurrentStatus.DSK2RollingFrames) {
             buttonDSK2Auto.image = redImage;
+            textDSK2Duration.stringValue = [self intDurationToNSString:mixerCurrentStatus.DSK2RollingFrames];
+        } else {
+            textDSK2Duration.stringValue = [self intDurationToNSString:mixerCurrentStatus.DSK2Duration];
         }
         
     } else {
