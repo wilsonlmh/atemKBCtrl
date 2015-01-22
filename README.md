@@ -20,18 +20,26 @@ To use this app:
 
 to do list:
 
-Implement DSK rate change
-
-Implement Transition rate change
-
 Implement NSDefault for state-saving
 
 Implement Virtual Keyboard Config-er
 
 Implement channel mapping configuration
 
-Implement mouse(trackpad slider control)
+[done]Implement mouse(trackpad slider control)
 
-Remove log text area
+[done]Make gui button works concurrently
 
-Remove all debug log actions
+[done]Implement Transition rate change
+
+[done]Remove debug log actions
+
+[done]Implement DSK rate change
+
+[done]Remove log text area
+
+[done]Update UI
+
+[done]Change all updateMixerCurrentStatus to be call by MainThread
+
+[done]Implement disconnect/reconnect
