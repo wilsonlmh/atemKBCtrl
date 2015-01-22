@@ -375,7 +375,7 @@ private:
     isKBControlling = false;
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
-    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
     {
         kbShortName[0]=@"a";
         kbShortName[11]=@"b";
@@ -981,9 +981,13 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textTRANSPreview.enabled = false;
         textTRANSDuration.enabled = false;
         textTRANSMix.enabled = false;
+        textTRANSMixDuration.enabled = false;
         textTRANSDip.enabled = false;
+        textTRANSDipDuration.enabled = false;
         textTRANSWipe.enabled = false;
+        textTRANSWipeDuration.enabled = false;
         textTRANSDve.enabled = false;
+        textTRANSDveDuration.enabled = false;
         textDSK1Preview.enabled = false;
         textDSK1On.enabled = false;
         textDSK1Auto.enabled = false;
@@ -1017,9 +1021,13 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textTRANSPreview.enabled = true;
         textTRANSDuration.enabled = true;
         textTRANSMix.enabled = true;
+        textTRANSMixDuration.enabled = true;
         textTRANSDip.enabled = true;
+        textTRANSDipDuration.enabled = true;
         textTRANSWipe.enabled = true;
+        textTRANSWipeDuration.enabled = true;
         textTRANSDve.enabled = true;
+        textTRANSDveDuration.enabled = true;
         textDSK1Preview.enabled = true;
         textDSK1On.enabled = true;
         textDSK1Auto.enabled = true;
@@ -1106,12 +1114,32 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                                            key=NULL;
                                        }
                                    },
-                                   @"TRANS": ^{
+                                   @"TRANSMix": ^{
+                                       uint32_t CRATE;
+                                       mTransitionMixParameters->GetRate(&CRATE);
+                                       mTransitionMixParameters->SetRate(CRATE+1);
+                                   },
+                                   @"TRANSDip": ^{
+                                       uint32_t CRATE;
+                                       mTransitionDipParameters->GetRate(&CRATE);
+                                       mTransitionDipParameters->SetRate(CRATE+1);
+                                   },
+                                   @"TRANSWipe": ^{
+                                       uint32_t CRATE;
+                                       mTransitionWipeParameters->GetRate(&CRATE);
+                                       mTransitionWipeParameters->SetRate(CRATE+1);
+                                   },
+                                   @"TRANSDve": ^{
+                                       uint32_t CRATE;
+                                       if (mTransitionDVEParameters) {
+                                           mTransitionDVEParameters->GetRate(&CRATE);
+                                           mTransitionDVEParameters->SetRate(CRATE+1);
+                                       }
                                    },
                                    }[sender.alternateTitle];
         if (selectedCase !=nil) selectedCase();
+        [self performSelector:@selector(updateMixerCurrentStatus) withObject:nil afterDelay:0.1];
     }
-
 }
 
 - (IBAction)clickedDownArraow:(NSButton*)sender {
@@ -1135,10 +1163,29 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                                            key=NULL;
                                        }
                                    },
-                                   @"TRANS": ^{
+                                   @"TRANSMix": ^{
+                                       uint32_t CRATE;
+                                       mTransitionMixParameters->GetRate(&CRATE);
+                                       mTransitionMixParameters->SetRate(CRATE-1);
+                                   },
+                                   @"TRANSDip": ^{
+                                       uint32_t CRATE;
+                                       mTransitionDipParameters->GetRate(&CRATE);
+                                       mTransitionDipParameters->SetRate(CRATE-1);
+                                   },
+                                   @"TRANSWipe": ^{
+                                       uint32_t CRATE;
+                                       mTransitionWipeParameters->GetRate(&CRATE);
+                                       mTransitionWipeParameters->SetRate(CRATE-1);
+                                   },
+                                   @"TRANSDve": ^{
+                                       uint32_t CRATE;
+                                       mTransitionDVEParameters->GetRate(&CRATE);
+                                       mTransitionDVEParameters->SetRate(CRATE-1);
                                    },
                                    }[sender.alternateTitle];
         if (selectedCase !=nil) selectedCase();
+        [self performSelector:@selector(updateMixerCurrentStatus) withObject:nil afterDelay:0.1];
     }
 }
 
@@ -1164,7 +1211,17 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                                            key=NULL;
                                        }
                                    },
-                                   @"TRANS": ^{
+                                   @"TRANSMix": ^{
+                                       mTransitionMixParameters->SetRate(convertedDuration);
+                                   },
+                                   @"TRANSDip": ^{
+                                       mTransitionDipParameters->SetRate(convertedDuration);
+                                   },
+                                   @"TRANSWipe": ^{
+                                       mTransitionWipeParameters->SetRate(convertedDuration);
+                                   },
+                                   @"TRANSDve": ^{
+                                       if (mTransitionDVEParameters) { mTransitionDVEParameters->SetRate(convertedDuration); }
                                    },
                                    }[[[sender cell] placeholderString]];
         if (selectedCase !=nil) selectedCase();
@@ -1288,13 +1345,23 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
             mixerCurrentStatus.PGMCh = 8;
         }
         
+        
+        mTransitionMixParameters->GetRate(&mixerCurrentStatus.TRANSMixDuration);
+        mTransitionDipParameters->GetRate(&mixerCurrentStatus.TRANSDipDuration);
+        mTransitionWipeParameters->GetRate(&mixerCurrentStatus.TRANSWipeDuration);
+        if (mTransitionDVEParameters) { mTransitionDVEParameters->GetRate(&mixerCurrentStatus.TRANSDveDuration); }
+        
         if (CTRANS == bmdSwitcherTransitionStyleMix) {
+            mTransitionMixParameters->GetRate(&mixerCurrentStatus.TRANSDuration);
             mixerCurrentStatus.TRANSCurrentMode = @"mix";
         } else if (CTRANS == bmdSwitcherTransitionStyleWipe) {
+            mTransitionWipeParameters->GetRate(&mixerCurrentStatus.TRANSDuration);
             mixerCurrentStatus.TRANSCurrentMode = @"wipe";
         } else if (CTRANS == bmdSwitcherTransitionStyleDip) {
+            mTransitionDipParameters->GetRate(&mixerCurrentStatus.TRANSDuration);
             mixerCurrentStatus.TRANSCurrentMode = @"dip";
         } else if (CTRANS == bmdSwitcherTransitionStyleDVE) {
+            mTransitionDVEParameters->GetRate(&mixerCurrentStatus.TRANSDuration);
             mixerCurrentStatus.TRANSCurrentMode = @"dve";
         }
         
@@ -1311,6 +1378,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &mixerCurrentStatus.TRANSStage);
         mMixEffectBlock->GetInt(bmdSwitcherMixEffectBlockPropertyIdTransitionFramesRemaining, &mixerCurrentStatus.TRANSRollingFrames);
         mMixEffectBlock->GetFlag(bmdSwitcherMixEffectBlockPropertyIdPreviewTransition, &mixerCurrentStatus.TRANSPreviewing);
+        
         
         
         //DSK
@@ -1399,6 +1467,26 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         mTransitionParameters = NULL;
     }
     
+    if (mTransitionMixParameters) {
+        mTransitionMixParameters->Release();
+        mTransitionMixParameters = NULL;
+    }
+    
+    if (mTransitionWipeParameters) {
+        mTransitionWipeParameters->Release();
+        mTransitionWipeParameters = NULL;
+    }
+    
+    if (mTransitionDipParameters) {
+        mTransitionDipParameters->Release();
+        mTransitionDipParameters = NULL;
+    }
+    
+    if (mTransitionDVEParameters) {
+        mTransitionDVEParameters->Release();
+        mTransitionDVEParameters = NULL;
+    }
+    
     mixerCurrentStatus.Connected = false;
     [self performSelectorOnMainThread:@selector(toggleUIConnectionAllTextField) withObject:nil waitUntilDone:YES];
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
@@ -1466,7 +1554,16 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         
         //Transition
         mTransitionParameters = NULL;
+        mTransitionMixParameters = NULL;
+        mTransitionWipeParameters = NULL;
+        mTransitionDipParameters = NULL;
+        mTransitionDVEParameters = NULL;
+        
         mMixEffectBlock->QueryInterface(IID_IBMDSwitcherTransitionParameters, (void**)&mTransitionParameters);
+        mMixEffectBlock->QueryInterface(IID_IBMDSwitcherTransitionMixParameters, (void**)&mTransitionMixParameters);
+        mMixEffectBlock->QueryInterface(IID_IBMDSwitcherTransitionWipeParameters, (void**)&mTransitionWipeParameters);
+        mMixEffectBlock->QueryInterface(IID_IBMDSwitcherTransitionDipParameters, (void**)&mTransitionDipParameters);
+        mMixEffectBlock->QueryInterface(IID_IBMDSwitcherTransitionDVEParameters, (void**)&mTransitionDVEParameters);
         mTransitionParameters->AddCallback(mTransitionMonitor);
 
         //DSK
@@ -1699,6 +1796,13 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         } else {
             buttonTRANSAuto.image = normalImage;
         }
+        
+        //TRANSDuration
+        textTRANSDuration.stringValue = [self intDurationToNSString:mixerCurrentStatus.TRANSRollingFrames];
+        textTRANSMixDuration.stringValue = [self intDurationToNSString:mixerCurrentStatus.TRANSMixDuration];
+        textTRANSDipDuration.stringValue = [self intDurationToNSString:mixerCurrentStatus.TRANSDipDuration];
+        textTRANSWipeDuration.stringValue = [self intDurationToNSString:mixerCurrentStatus.TRANSWipeDuration];
+        textTRANSDveDuration.stringValue = [self intDurationToNSString:mixerCurrentStatus.TRANSDveDuration];
         
         //DSK1
         if (mixerCurrentStatus.DSK1On) {

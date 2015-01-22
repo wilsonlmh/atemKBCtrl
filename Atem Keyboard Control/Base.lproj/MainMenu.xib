@@ -82,12 +82,16 @@
                 <outlet property="textTRANSAuto" destination="JFR-kp-5gl" id="HZ3-yB-d0A"/>
                 <outlet property="textTRANSCut" destination="nnU-AK-qgw" id="Pzt-0P-pWo"/>
                 <outlet property="textTRANSDip" destination="Dnf-Rw-Yy0" id="HBc-Z9-zLC"/>
+                <outlet property="textTRANSDipDuration" destination="p6u-Wf-mPu" id="JSA-T2-IY4"/>
                 <outlet property="textTRANSDuration" destination="MbJ-p3-iJJ" id="oxx-UC-hkG"/>
                 <outlet property="textTRANSDve" destination="A5C-TZ-9RS" id="F3q-OY-GpU"/>
+                <outlet property="textTRANSDveDuration" destination="3s9-cZ-4VK" id="K7k-QZ-bkI"/>
                 <outlet property="textTRANSHold" destination="0H4-Us-dgt" id="9g1-TO-f1q"/>
                 <outlet property="textTRANSMix" destination="e9c-tz-5yC" id="Uaw-nO-hwu"/>
+                <outlet property="textTRANSMixDuration" destination="bcY-zM-3EN" id="fHQ-Es-mV3"/>
                 <outlet property="textTRANSPreview" destination="Zp2-mP-J7f" id="Efm-aB-NmL"/>
                 <outlet property="textTRANSWipe" destination="05L-qP-qXt" id="n1z-cC-7Mf"/>
+                <outlet property="textTRANSWipeDuration" destination="5nJ-FA-Wek" id="5Kh-El-lzG"/>
                 <outlet property="window" destination="PVM-lC-7GS" id="YUd-v4-NoE"/>
             </connections>
         </customObject>
@@ -1414,6 +1418,45 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
+                                <textField verticalHuggingPriority="750" id="bcY-zM-3EN">
+                                    <rect key="frame" x="257" y="119" width="40" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSMix" drawsBackground="YES" id="ZnN-sw-dOV">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="p6u-Wf-mPu">
+                                    <rect key="frame" x="300" y="119" width="40" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSDip" drawsBackground="YES" id="JcT-Kf-QfY">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="5nJ-FA-Wek">
+                                    <rect key="frame" x="345" y="119" width="40" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSWipe" drawsBackground="YES" id="bm7-kx-y9T">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="3s9-cZ-4VK">
+                                    <rect key="frame" x="388" y="119" width="40" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSDve" drawsBackground="YES" id="723-Ql-5Ov">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="changedDuration:" target="Voe-Tx-rLC" id="lWa-nQ-Z60"/>
+                                    </connections>
+                                </textField>
                                 <button id="qzw-aQ-gBK">
                                     <rect key="frame" x="144" y="159" width="41" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1538,9 +1581,9 @@
                                     </textFieldCell>
                                 </textField>
                                 <button id="wvS-gw-2t3">
-                                    <rect key="frame" x="199" y="174" width="40" height="40"/>
+                                    <rect key="frame" x="263" y="197" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" alternateTitle="TRANS" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Een-98-Eks">
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSMix" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Een-98-Eks">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -1548,19 +1591,8 @@
                                         <action selector="clickedUpArraow:" target="Voe-Tx-rLC" id="5Lv-Pw-fuK"/>
                                     </connections>
                                 </button>
-                                <button id="ufU-8Y-2hK">
-                                    <rect key="frame" x="199" y="102" width="40" height="40"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" alternateTitle="TRANS" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Kq6-4u-QMA">
-                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="system"/>
-                                    </buttonCell>
-                                    <connections>
-                                        <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="YQe-kx-Wct"/>
-                                    </connections>
-                                </button>
                                 <button id="38c-pw-VCm">
-                                    <rect key="frame" x="163" y="65" width="40" height="40"/>
+                                    <rect key="frame" x="168" y="68" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="square" alternateTitle="DSK1" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="4yg-j2-0es">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1571,7 +1603,7 @@
                                     </connections>
                                 </button>
                                 <button id="jtB-se-Z5E">
-                                    <rect key="frame" x="164" y="-6" width="40" height="40"/>
+                                    <rect key="frame" x="168" y="2" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="square" alternateTitle="DSK1" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="UtA-mJ-0yk">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1582,7 +1614,7 @@
                                     </connections>
                                 </button>
                                 <button id="MJ8-Qc-M2E">
-                                    <rect key="frame" x="232" y="65" width="40" height="40"/>
+                                    <rect key="frame" x="236" y="68" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="square" alternateTitle="DSK2" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="bcB-Vh-ikH">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1593,7 +1625,7 @@
                                     </connections>
                                 </button>
                                 <button id="uIu-51-dlh">
-                                    <rect key="frame" x="233" y="-6" width="40" height="40"/>
+                                    <rect key="frame" x="237" y="2" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="square" alternateTitle="DSK2" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="F31-Xc-9aB">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1601,6 +1633,83 @@
                                     </buttonCell>
                                     <connections>
                                         <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="bii-iO-jrl"/>
+                                    </connections>
+                                </button>
+                                <button id="ufU-8Y-2hK">
+                                    <rect key="frame" x="263" y="90" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSMix" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Kq6-4u-QMA">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="YQe-kx-Wct"/>
+                                    </connections>
+                                </button>
+                                <button id="oDf-6L-H1m">
+                                    <rect key="frame" x="305" y="197" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSDip" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="2v8-F0-Z1b">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedUpArraow:" target="Voe-Tx-rLC" id="TxE-zV-hbF"/>
+                                    </connections>
+                                </button>
+                                <button id="kqx-fa-cem">
+                                    <rect key="frame" x="305" y="90" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSDip" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Fkm-sh-Szz">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="iNE-pd-DzD"/>
+                                    </connections>
+                                </button>
+                                <button id="VvT-UN-v1H">
+                                    <rect key="frame" x="350" y="197" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSWipe" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="baN-5p-D2c">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedUpArraow:" target="Voe-Tx-rLC" id="hqY-gH-LiL"/>
+                                    </connections>
+                                </button>
+                                <button id="j5C-0H-veD">
+                                    <rect key="frame" x="350" y="90" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSWipe" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="gd7-lE-dwh">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="vs9-W2-w9l"/>
+                                    </connections>
+                                </button>
+                                <button id="TOl-Rr-gfh">
+                                    <rect key="frame" x="393" y="197" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSDve" bezelStyle="shadowlessSquare" image="upArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="zVl-pL-HQ1">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedUpArraow:" target="Voe-Tx-rLC" id="QgE-bV-JPh"/>
+                                    </connections>
+                                </button>
+                                <button id="MUD-20-X2q">
+                                    <rect key="frame" x="393" y="90" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" alternateTitle="TRANSDve" bezelStyle="shadowlessSquare" image="downArrow" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="Lzc-eE-uVQ">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="gmq-c8-ihA"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -1773,8 +1882,8 @@
     <resources>
         <image name="bar" width="800" height="11"/>
         <image name="blackButton" width="40" height="40"/>
-        <image name="downArrow" width="28.799999237060547" height="28.799999237060547"/>
+        <image name="downArrow" width="21.600000381469727" height="21.600000381469727"/>
         <image name="topBar" width="800" height="100"/>
-        <image name="upArrow" width="28.799999237060547" height="28.799999237060547"/>
+        <image name="upArrow" width="21.600000381469727" height="21.600000381469727"/>
     </resources>
 </document>

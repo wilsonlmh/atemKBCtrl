@@ -97,9 +97,13 @@ class DSKMonitor;
     IBOutlet NSTextField*	textTRANSPreview;
     IBOutlet NSTextField*   textTRANSDuration;
     IBOutlet NSTextField*	textTRANSMix;
+    IBOutlet NSTextField*	textTRANSMixDuration;
     IBOutlet NSTextField*	textTRANSDip;
+    IBOutlet NSTextField*	textTRANSDipDuration;
     IBOutlet NSTextField*	textTRANSWipe;
+    IBOutlet NSTextField*	textTRANSWipeDuration;
     IBOutlet NSTextField*	textTRANSDve;
+    IBOutlet NSTextField*	textTRANSDveDuration;
     IBOutlet NSTextField*	textDSK1Preview;
     IBOutlet NSTextField*	textDSK1On;
     IBOutlet NSTextField*	textDSK1Auto;
@@ -140,7 +144,10 @@ class DSKMonitor;
     std::list<IBMDSwitcherDownstreamKey*> mDSK;
     TransitionMonitor*          mTransitionMonitor;
     DSKMonitor*                 mDSKMonitor;
-    
+    IBMDSwitcherTransitionMixParameters* mTransitionMixParameters;
+    IBMDSwitcherTransitionWipeParameters* mTransitionWipeParameters;
+    IBMDSwitcherTransitionDipParameters* mTransitionDipParameters;
+    IBMDSwitcherTransitionDVEParameters* mTransitionDVEParameters;
     
     struct mixerCurrentStatus {
         bool Connected;
@@ -160,8 +167,12 @@ class DSKMonitor;
         int PRVCh; //0:Black,1-6:Ch,7-8:ColorA/B
         double TRANSStage; //0:Begin, 1:End
         bool TRANSPreviewing;
-        long TRANSDuration;
+        uint32_t TRANSDuration;
         int64_t TRANSRollingFrames; // <0:Not rolling
+        uint32_t TRANSMixDuration;
+        uint32_t TRANSWipeDuration;
+        uint32_t TRANSDipDuration;
+        uint32_t TRANSDveDuration;
         __unsafe_unretained NSString* TRANSNextMode;
         __unsafe_unretained NSString* TRANSCurrentMode;
         bool DSK1Preview;
@@ -172,7 +183,7 @@ class DSKMonitor;
         bool DSK2On;
         uint32_t DSK2RollingFrames; // <0:Not rolling
         uint32_t DSK2Duration;
-        //{false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,@"",@"",false,false,0,0,false,false,0,0};
+        //{false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
 
     }mixerCurrentStatus;
     
