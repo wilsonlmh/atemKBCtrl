@@ -127,7 +127,9 @@ class DSKMonitor;
     NSEvent*                kbGlobalDownHandle;
     NSEvent*                kbGlobalUpHandle;
     NSEvent*                kbGlobalFlagsHandle;
+    NSEvent*                mouseLocalMoveHandle;
     NSTimer*                timerFadeOut;
+    CGFloat                 lastMouseY;
     float                   floatFadeOutCount;
     
     
@@ -192,7 +194,7 @@ class DSKMonitor;
 //@property (assign) IBOutlet NSWindow *window;
 
 //UI IBAction Methods
--(IBAction)clickedUIMappingButton:(id)sender;
+-(IBAction)clickedUIMappingButton:(NSButton*)sender;
 -(IBAction)changeUIMappingTransitionSlider:(id)sender;
 -(IBAction)clickedUIClearLogs:(id)sender;
 -(IBAction)clickedUIToggleAction:(id)sender;
@@ -210,6 +212,7 @@ class DSKMonitor;
 -(void)updateMixerCurrentStatus;
 -(int)nsStringDurationToInt:(NSString*)duration;
 -(NSString*)intDurationToNSString:(int)duration;
+-(void)mouseMoving;
 
 //UI <-> AppDelegate Methods
 -(void)toggleMouseMonitor;
@@ -222,6 +225,7 @@ class DSKMonitor;
 -(void)triggerKB:(int)keyCode isDown:(bool)isDown;
 -(void)executeCmd:(NSString*)shortName;
 -(void)toggleKeyListening:(int)type;
+-(void)windowLostFocus;
 //-(void)appLog:(NSString*)content;
 
 

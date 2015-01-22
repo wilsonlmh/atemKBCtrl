@@ -1196,7 +1196,7 @@
                                 <button id="dSc-qz-gKx">
                                     <rect key="frame" x="9" y="51" width="41" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" title="PRV" alternateTitle="DSK1Preview" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="st5-v3-mIF">
+                                    <buttonCell key="cell" type="square" title="TIE" alternateTitle="DSK1Preview" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="st5-v3-mIF">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
@@ -1280,7 +1280,7 @@
                                 <button id="9zq-1r-K92">
                                     <rect key="frame" x="301" y="51" width="40" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" title="PRV" alternateTitle="DSK2Preview" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="C2Q-U3-hW8">
+                                    <buttonCell key="cell" type="square" title="TIE" alternateTitle="DSK2Preview" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="C2Q-U3-hW8">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
@@ -1460,7 +1460,7 @@
                                 <button id="qzw-aQ-gBK">
                                     <rect key="frame" x="144" y="159" width="41" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" title="PREV" alternateTitle="TRANSPrevious" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ofU-ve-MYp">
+                                    <buttonCell key="cell" type="square" title="PRV" alternateTitle="TRANSPrevious" bezelStyle="shadowlessSquare" image="blackButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ofU-ve-MYp">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>

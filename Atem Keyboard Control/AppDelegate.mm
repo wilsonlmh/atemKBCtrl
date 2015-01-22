@@ -625,7 +625,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     for (int i=0; i<[arrayToSearch count]; i++) {
         if ([obj isEqual:arrayToSearch[i]]) {
             return i;
-            
         }
     }
     return -1;//nil changed to -1
@@ -651,10 +650,18 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         
         void (^selectedCase)() = @{
                                    @"TRANSHoldDown" : ^ {
-                                       [self toggleMouseMonitor];
+                                       if (!isMouseControlling) {
+                                           isMouseControlling = true;
+                                           [self performSelectorOnMainThread:@selector(updateUIbetweenMixer) withObject:nil waitUntilDone:YES];
+                                           [self performSelectorOnMainThread:@selector(toggleMouseMonitor) withObject:nil waitUntilDone:YES];
+                                       }
                                    },
                                    @"TRANSHoldUp" : ^ {
-                                       [self toggleMouseMonitor];
+                                       if (isMouseControlling) {
+                                           isMouseControlling = false;
+                                           [self performSelectorOnMainThread:@selector(updateUIbetweenMixer) withObject:nil waitUntilDone:YES];
+                                           [self performSelectorOnMainThread:@selector(toggleMouseMonitor) withObject:nil waitUntilDone:YES];
+                                       }
                                    },
                                    @"PGMBlack" : ^ {
                                        mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Black);
@@ -795,14 +802,34 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 }
 
 -(void)toggleMouseMonitor {
+    if (mouseLocalMoveHandle) {
+        [NSEvent removeMonitor:mouseLocalMoveHandle];
+        mouseLocalMoveHandle = NULL;
+    }
+    
     if (isMouseControlling) {
-        isMouseControlling = false;
-        //Remove Montior
-        //Note: The montior must verify if connected to mixer or not
-    } else {
-        isMouseControlling = true;
+        lastMouseY = [NSEvent mouseLocation].y;
+        mouseLocalMoveHandle = [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^(NSEvent * event) {
+            [self mouseMoving];
+        }];
         //Add Montior
         //Note: The montior must verify if connected to mixer or not
+    }
+}
+
+-(void)mouseMoving {
+    if ((mouseLocalMoveHandle) && (isMouseControlling) && (mixerCurrentStatus.Connected)) {
+        CGFloat currentMouseY = [NSEvent mouseLocation].y;
+        double deltaMouseY;
+        mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &deltaMouseY);
+        deltaMouseY = (double)((currentMouseY - lastMouseY)/200);
+        if (isReverseSlider) { deltaMouseY =  -deltaMouseY; };
+        if (deltaMouseY > 1) { deltaMouseY = 1; }
+        if (deltaMouseY < 0) { deltaMouseY = 0; }
+        mMixEffectBlock->SetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, deltaMouseY);
+        if ((deltaMouseY == 1) || (deltaMouseY == 0)) {
+            [self performSelectorOnMainThread:@selector(toggleMouseMonitor) withObject:nil waitUntilDone:YES];
+        }
     }
 }
 
@@ -1051,9 +1078,12 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 
 
 
-
-- (IBAction)clickedUIMappingButton:(id)sender {
-    
+- (IBAction)clickedUIMappingButton:(NSButton*)sender {
+    if (mixerCurrentStatus.Connected) {
+        if ((![sender.alternateTitle  isEqual: @"TRANSHoldUp"]) && (![sender.alternateTitle  isEqual: @"TRANSHoldDown"])) {
+            [self executeCmd:sender.alternateTitle];
+        }
+    }
 }
 
 - (IBAction)changeUIMappingTransitionSlider:(id)sender{
@@ -1719,6 +1749,11 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                 NSLog(@"");
         }
         
+        //TRANSHold
+        if (isMouseControlling) {
+            buttonTRANSHold.image = blueImage;
+        }
+        
         //TRANS Mode
         if (mixerCurrentStatus.TRANSNextMode == mixerCurrentStatus.TRANSCurrentMode) {
             void (^selectedCase)() = @{
@@ -1874,15 +1909,18 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     
 }
 
+-(void)windowLostFocus {
+    [self executeCmd:@"TRANSHoldUp"];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self setupUI];
     [self setupValues];
-    //
-    
-    
     
     [self mixerDisconnected];
     //
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowLostFocus) name:NSWindowDidResignMainNotification object:window];
+
     [window becomeFirstResponder];
 }
 
