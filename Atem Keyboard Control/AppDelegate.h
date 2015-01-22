@@ -130,6 +130,7 @@ class DSKMonitor;
     NSEvent*                mouseLocalMoveHandle;
     NSTimer*                timerFadeOut;
     CGFloat                 lastMouseY;
+    CGFloat                 lastOnlineMouseY;
     float                   floatFadeOutCount;
     
     

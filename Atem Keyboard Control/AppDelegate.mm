@@ -820,15 +820,25 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 -(void)mouseMoving {
     if ((mouseLocalMoveHandle) && (isMouseControlling) && (mixerCurrentStatus.Connected)) {
         CGFloat currentMouseY = [NSEvent mouseLocation].y;
-        double deltaMouseY;
-        mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &deltaMouseY);
-        deltaMouseY = (double)((currentMouseY - lastMouseY)/200);
+        double onlineMouseY,deltaMouseY,baseMouseY;
+        mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &onlineMouseY);
+        baseMouseY = onlineMouseY;
+        if ((lastOnlineMouseY > onlineMouseY) && (onlineMouseY > 0)) { baseMouseY = lastOnlineMouseY;}
+        deltaMouseY = (double)((currentMouseY - lastMouseY)/300);
         if (isReverseSlider) { deltaMouseY =  -deltaMouseY; };
+        deltaMouseY = baseMouseY + deltaMouseY;
         if (deltaMouseY > 1) { deltaMouseY = 1; }
         if (deltaMouseY < 0) { deltaMouseY = 0; }
         mMixEffectBlock->SetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, deltaMouseY);
-        if ((deltaMouseY == 1) || (deltaMouseY == 0)) {
-            [self performSelectorOnMainThread:@selector(toggleMouseMonitor) withObject:nil waitUntilDone:YES];
+        lastMouseY = currentMouseY;
+        lastOnlineMouseY = deltaMouseY;
+        if (((deltaMouseY == 1) || (deltaMouseY == 0)) && (onlineMouseY != deltaMouseY)) {
+            if (isReverseSlider) {
+                sliderTRANS.doubleValue = deltaMouseY;
+            } else {
+                sliderTRANS.doubleValue = 1-deltaMouseY;
+            }
+            [self performSelectorOnMainThread:@selector(windowLostFocus) withObject:nil waitUntilDone:YES];
         }
     }
 }
