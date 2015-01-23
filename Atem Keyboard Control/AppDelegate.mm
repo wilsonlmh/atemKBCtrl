@@ -495,7 +495,7 @@ private:
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
 }
 
--(void) updateKBMappings{
+-(void)updateKBMappings{
     cmdKBMapping = makeEmptyNSStringNSArray(150);
     if ([self kbShortNameSearch:kbShortName obj:textPGMBlack.stringValue]!= -1) {
         cmdKBMapping[[self kbShortNameSearch:kbShortName obj:textPGMBlack.stringValue]] = @"PGMBlack";
@@ -833,11 +833,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         lastMouseY = currentMouseY;
         lastOnlineMouseY = deltaMouseY;
         if (((deltaMouseY == 1) || (deltaMouseY == 0)) && (onlineMouseY != deltaMouseY)) {
-            if (isReverseSlider) {
-                sliderTRANS.doubleValue = deltaMouseY;
-            } else {
-                sliderTRANS.doubleValue = 1-deltaMouseY;
-            }
             [self performSelectorOnMainThread:@selector(windowLostFocus) withObject:nil waitUntilDone:YES];
         }
     }
@@ -987,11 +982,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     
 }
 
-/*-(void)appLog:(NSString*)content {
-    logTextArea.string = [logTextArea.string stringByAppendingString:content];
-    logTextArea.string = [logTextArea.string stringByAppendingString:@"\n"];
-}*/
-
 -(void)toggleAllMappingKBNameTextField {
     if (isKBControlling) {
         textPGMBlack.enabled = false;
@@ -1085,8 +1075,6 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         textIP.enabled = YES;
     }
 }
-
-
 
 - (IBAction)clickedUIMappingButton:(NSButton*)sender {
     if (mixerCurrentStatus.Connected) {
@@ -1415,10 +1403,10 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
             mixerCurrentStatus.TRANSNextMode = @"dve";
         }
         
+        lastTransitionStage = mixerCurrentStatus.TRANSStage;
         mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &mixerCurrentStatus.TRANSStage);
         mMixEffectBlock->GetInt(bmdSwitcherMixEffectBlockPropertyIdTransitionFramesRemaining, &mixerCurrentStatus.TRANSRollingFrames);
         mMixEffectBlock->GetFlag(bmdSwitcherMixEffectBlockPropertyIdPreviewTransition, &mixerCurrentStatus.TRANSPreviewing);
-        
         
         
         //DSK
@@ -1607,7 +1595,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         mTransitionParameters->AddCallback(mTransitionMonitor);
 
         //DSK
-        mDSK.clear();//Not sure if ne
+        mDSK.clear();
         IBMDSwitcherDownstreamKeyIterator* tmpDskIterator;
         mSwitcher->CreateIterator(IID_IBMDSwitcherDownstreamKeyIterator, (void**)&tmpDskIterator);
         IBMDSwitcherDownstreamKey* tmpDSK;
@@ -1816,17 +1804,24 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
             if (selectedCase !=nil) selectedCase2();
         }
         
+        bool TRANSReturn = false;
+        
         //TRANSSlider
-        if ((mixerCurrentStatus.TRANSStage == 1) && (sliderTRANS.doubleValue != 0) && (sliderTRANS.doubleValue != 1)) {
-            isReverseSlider = !isReverseSlider;
+        /*if ((sliderTRANS.doubleValue != 0)  && (sliderTRANS.doubleValue != 1)) {
+            TRANSReturn = true;
+        }*/
+        if (lastTransitionStage != mixerCurrentStatus.TRANSStage) {
+            if ((isReverseSlider) && (sliderTRANS.doubleValue != 1 - mixerCurrentStatus.TRANSStage)) {
+                sliderTRANS.doubleValue = 1 - mixerCurrentStatus.TRANSStage;
+            } else if ((!isReverseSlider) && (sliderTRANS.doubleValue != mixerCurrentStatus.TRANSStage)) {
+                sliderTRANS.doubleValue = mixerCurrentStatus.TRANSStage;
+            }
+            if (mixerCurrentStatus.TRANSStage == 1) {
+                isReverseSlider = !isReverseSlider;
+            }
         }
         
-        if (isReverseSlider) {
-            sliderTRANS.doubleValue = 1 - mixerCurrentStatus.TRANSStage;
-            
-        } else {
-            sliderTRANS.doubleValue = mixerCurrentStatus.TRANSStage;
-        }
+        
         
         //TRANSPreview
         if (mixerCurrentStatus.TRANSPreviewing) {

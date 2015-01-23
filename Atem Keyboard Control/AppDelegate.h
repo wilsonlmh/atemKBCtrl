@@ -132,6 +132,7 @@ class DSKMonitor;
     CGFloat                 lastMouseY;
     CGFloat                 lastOnlineMouseY;
     float                   floatFadeOutCount;
+    double                   lastTransitionStage;
     
     
     //ATEM var
