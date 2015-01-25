@@ -16,6 +16,7 @@ To use this app:
 
 4. Click the toggle again to disable keyboard controlling, and then you can edit the shortcuts you want.
 
+5. To configure Black, Ch1-6, ColorA and ColorB mapping, goto "ATEM Keyboard Control"->"Preferences" or use hotkey Cmd+,
 
 
 to do list:
@@ -24,7 +25,7 @@ Implement NSDefault for state-saving
 
 Implement Virtual Keyboard Config-er
 
-Implement channel mapping configuration
+[done]Implement channel mapping configuration
 
 [done]Implement mouse(trackpad slider control)
 
