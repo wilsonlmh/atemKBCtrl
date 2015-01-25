@@ -375,7 +375,8 @@ private:
     isKBControlling = false;
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
-    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,2001,2002,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    PreferenceWindow = [[preferenceWindow alloc] initWithWindowNibName:@"preferenceWindow"];
     {
         kbShortName[0]=@"a";
         kbShortName[11]=@"b";
@@ -1256,6 +1257,46 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     }
 }
 
+-(IBAction)clickedMenuPreferences:(id)sender {
+    
+    HRESULT result;
+    IBMDSwitcherInputIterator* inputIterator = NULL;
+    IBMDSwitcherInput* input = NULL;
+    preferenceLabel = [NSMutableArray array];
+    preferenceChannels = [NSMutableArray array];
+    
+    [preferenceLabel removeAllObjects];
+    [preferenceChannels removeAllObjects];
+    
+    if (mixerCurrentStatus.Connected) {
+        result = mSwitcher->CreateIterator(IID_IBMDSwitcherInputIterator, (void**)&inputIterator);
+        if (FAILED(result))
+        {
+            NSLog(@"Could not create IBMDSwitcherInputIterator iterator");
+            return;
+        }
+        
+        while (S_OK == inputIterator->Next(&input)) {
+            CFStringRef cfName;
+            BMDSwitcherInputId bid;
+            
+            input->GetInputId(&bid);
+            input->GetString(bmdSwitcherInputPropertyIdLongName, &cfName);
+            NSString* name = (__bridge NSString *)cfName;
+            
+            [preferenceLabel addObject:name];
+            [preferenceChannels addObject:[NSString stringWithFormat:@"%lld",bid]];
+        }
+        
+        inputIterator->Release();
+    }
+    NSArray* configArray = @[[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Black],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch1],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch2],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch3],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch4],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch5],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch6],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.ColorA],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.ColorB]];
+    
+    [PreferenceWindow loadWindow];
+    [PreferenceWindow refreshConfig:preferenceChannels label:preferenceLabel config:configArray isConnected:mixerCurrentStatus.Connected];
+    [PreferenceWindow showWindow:nil];
+}
+
 -(void)updateMixerCurrentStatus {
     if (mixerCurrentStatus.Connected) {
         /*
@@ -1551,9 +1592,11 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         {
             IBMDSwitcherInput* input = NULL;
             
+            
             // For every input, install a callback to monitor property changes on the input
             while (S_OK == inputIterator->Next(&input))
             {
+                
                 InputMonitor* inputMonitor = new InputMonitor(input, self);
                 input->Release();
                 mInputMonitors.push_back(inputMonitor);
@@ -1918,6 +1961,21 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [self executeCmd:@"TRANSHoldUp"];
 }
 
+-(void)preferenceWindowClickedApplyButton {
+    if ((PreferenceWindow->isClickedApplyButton) && (mixerCurrentStatus.Connected)) {
+        mixerCurrentStatus.Black = PreferenceWindow->mappingConfig[0];
+        mixerCurrentStatus.Ch1 = PreferenceWindow->mappingConfig[1];
+        mixerCurrentStatus.Ch2 = PreferenceWindow->mappingConfig[2];
+        mixerCurrentStatus.Ch3 = PreferenceWindow->mappingConfig[3];
+        mixerCurrentStatus.Ch4 = PreferenceWindow->mappingConfig[4];
+        mixerCurrentStatus.Ch5 = PreferenceWindow->mappingConfig[5];
+        mixerCurrentStatus.Ch6 = PreferenceWindow->mappingConfig[6];
+        mixerCurrentStatus.ColorA = PreferenceWindow->mappingConfig[7];
+        mixerCurrentStatus.ColorB = PreferenceWindow->mappingConfig[8];
+        
+    }
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self setupUI];
     [self setupValues];
@@ -1925,8 +1983,9 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [self mixerDisconnected];
     //
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowLostFocus) name:NSWindowDidResignMainNotification object:window];
-
-    [window becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferenceWindowClickedApplyButton) name:@"preferenceWindowClickedApplyButton" object:nil];
+    
+    //[window becomeFirstResponder];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DDFC81A75706400C319FA /* preferenceWindow.m */; };
+		C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83DDFC91A75706400C319FA /* preferenceWindow.xib */; };
 		C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AC1A70F8BD001E6D25 /* topBar.png */; };
 		C84800AF1A70FD00001E6D25 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AE1A70FD00001E6D25 /* bar.png */; };
 		C84800B21A710261001E6D25 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B01A710261001E6D25 /* downArrow.png */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C83DDFC71A75706400C319FA /* preferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferenceWindow.h; sourceTree = "<group>"; };
+		C83DDFC81A75706400C319FA /* preferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferenceWindow.m; sourceTree = "<group>"; };
+		C83DDFC91A75706400C319FA /* preferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferenceWindow.xib; sourceTree = "<group>"; };
 		C84800AC1A70F8BD001E6D25 /* topBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBar.png; sourceTree = "<group>"; };
 		C84800AE1A70FD00001E6D25 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		C84800B01A710261001E6D25 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
@@ -101,6 +106,9 @@
 		C8BC03561A6AA6BA00D26560 /* Atem Keyboard Control */ = {
 			isa = PBXGroup;
 			children = (
+				C83DDFC81A75706400C319FA /* preferenceWindow.m */,
+				C83DDFC71A75706400C319FA /* preferenceWindow.h */,
+				C83DDFC91A75706400C319FA /* preferenceWindow.xib */,
 				C8BC03591A6AA6BA00D26560 /* AppDelegate.h */,
 				C8BC03B01A6ABB2100D26560 /* MainMenu.xib */,
 				C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */,
@@ -254,6 +262,7 @@
 				C84800AF1A70FD00001E6D25 /* bar.png in Resources */,
 				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
 				C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */,
+				C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */,
 				C84800B21A710261001E6D25 /* downArrow.png in Resources */,
 				C8D712BF1A6EE206005BC2F9 /* blackButton.png in Resources */,
 				C8D712C31A6EE206005BC2F9 /* yellowButton.png in Resources */,
@@ -279,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */,
 				C8BC035D1A6AA6BA00D26560 /* main.m in Sources */,
 				C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */,
 				C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */,

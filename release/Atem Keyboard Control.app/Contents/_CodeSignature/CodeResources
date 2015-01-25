@@ -10,13 +10,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		8pidcZOeKvdWafbrHBH28V/IBhU=
+		MSu2/+/RoimfTDkTHEl4mCJgUBU=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LOgbF1bSzcg9iO9o4DKp3pbDUTQ=
+			Ag0MzFZ4nmedumqLAylDCQ4FWYQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,6 +44,10 @@
 		<key>Resources/normalButton.png</key>
 		<data>
 		7iJvwcl4M+W9tdUTH5QQJQQdmvs=
+		</data>
+		<key>Resources/preferenceWindow.nib</key>
+		<data>
+		8tzgogkI8PmYli3kn8nGaN4JRZ8=
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>
@@ -70,13 +74,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		8pidcZOeKvdWafbrHBH28V/IBhU=
+		MSu2/+/RoimfTDkTHEl4mCJgUBU=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LOgbF1bSzcg9iO9o4DKp3pbDUTQ=
+			Ag0MzFZ4nmedumqLAylDCQ4FWYQ=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -104,6 +108,10 @@
 		<key>Resources/normalButton.png</key>
 		<data>
 		7iJvwcl4M+W9tdUTH5QQJQQdmvs=
+		</data>
+		<key>Resources/preferenceWindow.nib</key>
+		<data>
+		8tzgogkI8PmYli3kn8nGaN4JRZ8=
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>

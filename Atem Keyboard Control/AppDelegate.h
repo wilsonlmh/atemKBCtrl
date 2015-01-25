@@ -11,6 +11,7 @@
 #import <list>
 #include <string>
 #include <libkern/OSAtomic.h>
+#import "preferenceWindow.h"
 
 class MixEffectBlockMonitor;
 class SwitcherMonitor;
@@ -132,7 +133,12 @@ class DSKMonitor;
     CGFloat                 lastMouseY;
     CGFloat                 lastOnlineMouseY;
     float                   floatFadeOutCount;
-    double                   lastTransitionStage;
+    double                  lastTransitionStage;
+    preferenceWindow*       PreferenceWindow;
+    
+    //preference
+    NSMutableArray*         preferenceLabel;
+    NSMutableArray*         preferenceChannels;
     
     
     //ATEM var
@@ -205,6 +211,7 @@ class DSKMonitor;
 -(IBAction)clickedUpArraow:(NSButton*)sender;
 -(IBAction)clickedDownArraow:(NSButton*)sender;
 -(IBAction)changedDuration:(NSTextField*)sender;
+-(IBAction)clickedMenuPreferences:(id)sender;
 
 
 //ATEM Methods
@@ -217,6 +224,7 @@ class DSKMonitor;
 -(void)mouseMoving;
 
 //UI <-> AppDelegate Methods
+
 -(void)toggleMouseMonitor;
 -(void)toggleAllMappingKBNameTextField;
 -(void)toggleUIConnectionAllTextField;
@@ -228,6 +236,7 @@ class DSKMonitor;
 -(void)executeCmd:(NSString*)shortName;
 -(void)toggleKeyListening:(int)type;
 -(void)windowLostFocus;
+-(void)preferenceWindowClickedApplyButton;
 //-(void)appLog:(NSString*)content;
 
 
