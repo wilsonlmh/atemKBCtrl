@@ -2,7 +2,7 @@
 
 
 
-Very-draft instruction
+Very Simple Instruction
 
 
 
@@ -18,29 +18,14 @@ To use this app:
 
 5. To configure Black, Ch1-6, ColorA and ColorB mapping, goto "ATEM Keyboard Control"->"Preferences" or use hotkey Cmd+,
 
+Features:
 
-to do list:
+ - Map any key on keyboard to almost all ATEM TVS functions
 
-Implement NSDefault for state-saving
+ - GUI virtual keyboard for editing key mappings
 
-Implement Virtual Keyboard Config-er
+ - Auto-save all configuratioins 
+ 
+ - Configurable channels<->buttons mappings(in application preferences)
 
-[done]Implement channel mapping configuration
-
-[done]Implement mouse(trackpad slider control)
-
-[done]Make gui button works concurrently
-
-[done]Implement Transition rate change
-
-[done]Remove debug log actions
-
-[done]Implement DSK rate change
-
-[done]Remove log text area
-
-[done]Update UI
-
-[done]Change all updateMixerCurrentStatus to be call by MainThread
-
-[done]Implement disconnect/reconnect
+ 
