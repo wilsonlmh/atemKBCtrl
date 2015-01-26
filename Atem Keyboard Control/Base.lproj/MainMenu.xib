@@ -768,6 +768,17 @@
                             <color key="backgroundColor" red="0.28381878399999999" green="0.28381878399999999" blue="0.28381878399999999" alpha="1" colorSpace="calibratedRGB"/>
                         </textFieldCell>
                     </textField>
+                    <button id="RKq-75-Eel">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="530"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="AUh-kM-j2w">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickedBGButton:" target="Voe-Tx-rLC" id="LFz-6g-fh5"/>
+                        </connections>
+                    </button>
                     <box autoresizesSubviews="NO" appearanceType="aqua" borderType="line" titlePosition="noTitle" id="zSR-P7-Cjn">
                         <rect key="frame" x="357" y="10" width="440" height="382"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -775,13 +786,16 @@
                             <rect key="frame" x="1" y="1" width="438" height="380"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button id="BJY-1H-8Fa">
-                                    <rect key="frame" x="13" y="-28" width="431" height="387"/>
+                                <button id="gfm-oI-UjF">
+                                    <rect key="frame" x="-7" y="-131" width="800" height="530"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" state="on" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="Iio-aG-yyD">
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="01r-6E-Ywn">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="clickedBGButton:" target="Voe-Tx-rLC" id="AeZ-4F-QoD"/>
+                                    </connections>
                                 </button>
                                 <button id="P1R-Pm-ogS">
                                     <rect key="frame" x="12" y="318" width="40" height="40"/>
@@ -944,7 +958,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="P7Z-go-Kac"/>
                                     </connections>
                                 </button>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="DVG-CT-433">
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="DVG-CT-433" customClass="MappingText">
                                     <rect key="frame" x="6" y="281" width="61" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preview" id="tKk-4z-ufi">
@@ -1015,7 +1029,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="zH4-TX-o4y"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="h3T-1r-3c7">
+                                <textField verticalHuggingPriority="750" id="h3T-1r-3c7" customClass="MappingText">
                                     <rect key="frame" x="12" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="`" drawsBackground="YES" id="OyF-zg-Ryl">
@@ -1023,8 +1037,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="8mt-Jr-68w"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="qXe-pH-ysU">
+                                <textField verticalHuggingPriority="750" id="qXe-pH-ysU" customClass="MappingText">
                                     <rect key="frame" x="56" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1" drawsBackground="YES" id="hWY-FF-c6M">
@@ -1032,8 +1049,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="TYj-r7-gvj"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="UWs-6s-4oU">
+                                <textField verticalHuggingPriority="750" id="UWs-6s-4oU" customClass="MappingText">
                                     <rect key="frame" x="100" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="2" drawsBackground="YES" id="oMX-vX-REF">
@@ -1041,8 +1061,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="thW-6I-nzo"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="8nq-CO-KKp">
+                                <textField verticalHuggingPriority="750" id="8nq-CO-KKp" customClass="MappingText">
                                     <rect key="frame" x="144" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="3" drawsBackground="YES" id="xPf-II-lU4">
@@ -1050,8 +1073,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="H8y-Zm-YC4"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="B9G-1H-svd">
+                                <textField verticalHuggingPriority="750" id="B9G-1H-svd" customClass="MappingText">
                                     <rect key="frame" x="188" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="4" drawsBackground="YES" id="ooP-GX-Aae">
@@ -1059,8 +1085,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="CIS-SR-R6A"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="J47-c3-qLd">
+                                <textField verticalHuggingPriority="750" id="J47-c3-qLd" customClass="MappingText">
                                     <rect key="frame" x="232" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="5" drawsBackground="YES" id="jqI-M6-SMv">
@@ -1068,8 +1097,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="rp1-mE-yIb"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="8Cl-MD-Yky">
+                                <textField verticalHuggingPriority="750" id="8Cl-MD-Yky" customClass="MappingText">
                                     <rect key="frame" x="276" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="6" drawsBackground="YES" id="sDw-TZ-xGV">
@@ -1077,8 +1109,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="7dE-wF-Ygd"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="0Vb-qu-n7u">
+                                <textField verticalHuggingPriority="750" id="0Vb-qu-n7u" customClass="MappingText">
                                     <rect key="frame" x="320" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="-" drawsBackground="YES" id="U15-WX-xse">
@@ -1086,8 +1121,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="CXw-ac-rbb"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="PJo-hR-Dfg">
+                                <textField verticalHuggingPriority="750" id="PJo-hR-Dfg" customClass="MappingText">
                                     <rect key="frame" x="364" y="299" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="=" drawsBackground="YES" id="eRo-cI-Ene">
@@ -1095,8 +1133,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="ZsO-Gb-k20"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="o0Y-Wn-ld3">
+                                <textField verticalHuggingPriority="750" id="o0Y-Wn-ld3" customClass="MappingText">
                                     <rect key="frame" x="12" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="⇧" drawsBackground="YES" id="PEY-6T-H51">
@@ -1104,8 +1145,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="2Of-P1-o4W"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="bZ5-QU-vBZ">
+                                <textField verticalHuggingPriority="750" id="bZ5-QU-vBZ" customClass="MappingText">
                                     <rect key="frame" x="56" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="z" drawsBackground="YES" id="IJX-pL-LB5">
@@ -1113,8 +1157,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Sxt-XC-43K"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="oBL-Xh-x3D">
+                                <textField verticalHuggingPriority="750" id="oBL-Xh-x3D" customClass="MappingText">
                                     <rect key="frame" x="100" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="x" drawsBackground="YES" id="CMA-BL-9sJ">
@@ -1122,8 +1169,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="iEW-s4-lW8"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="CxU-0R-BN5">
+                                <textField verticalHuggingPriority="750" id="CxU-0R-BN5" customClass="MappingText">
                                     <rect key="frame" x="144" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="c" drawsBackground="YES" id="7mN-AG-dVL">
@@ -1131,8 +1181,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="BFy-kH-myM"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="Ztr-xP-IUL">
+                                <textField verticalHuggingPriority="750" id="Ztr-xP-IUL" customClass="MappingText">
                                     <rect key="frame" x="188" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="v" drawsBackground="YES" id="RL8-Jr-waP">
@@ -1140,8 +1193,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="83O-Zs-MTj"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="h1B-DT-zcs">
+                                <textField verticalHuggingPriority="750" id="h1B-DT-zcs" customClass="MappingText">
                                     <rect key="frame" x="232" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="b" drawsBackground="YES" id="tPi-ug-GmB">
@@ -1149,8 +1205,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="hMT-RB-3Eu"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="SEV-rU-yO5">
+                                <textField verticalHuggingPriority="750" id="SEV-rU-yO5" customClass="MappingText">
                                     <rect key="frame" x="276" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="n" drawsBackground="YES" id="ZzI-16-B7z">
@@ -1158,8 +1217,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="bjG-jG-hTw"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="2UT-oz-nMc">
+                                <textField verticalHuggingPriority="750" id="2UT-oz-nMc" customClass="MappingText">
                                     <rect key="frame" x="320" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="[" drawsBackground="YES" id="edd-AK-agO">
@@ -1167,8 +1229,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="wXS-0v-qyt"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="Gr6-bs-2vL">
+                                <textField verticalHuggingPriority="750" id="Gr6-bs-2vL" customClass="MappingText">
                                     <rect key="frame" x="364" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="]" drawsBackground="YES" id="hnS-hT-cXY">
@@ -1176,6 +1241,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="UXq-cQ-2dU"/>
+                                    </connections>
                                 </textField>
                                 <button id="GJg-vo-qa4">
                                     <rect key="frame" x="9" y="159" width="41" height="40"/>
@@ -1188,7 +1256,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="7BT-EL-XAZ"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="0H4-Us-dgt">
+                                <textField verticalHuggingPriority="750" id="0H4-Us-dgt" customClass="MappingText">
                                     <rect key="frame" x="10" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="⌘" drawsBackground="YES" id="lJ1-Hr-lls">
@@ -1196,6 +1264,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="xx9-OP-Wua"/>
+                                    </connections>
                                 </textField>
                                 <button id="dSc-qz-gKx">
                                     <rect key="frame" x="9" y="51" width="41" height="40"/>
@@ -1208,7 +1279,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="MUR-Ir-CQc"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="Yx2-zd-RVG">
+                                <textField verticalHuggingPriority="750" id="Yx2-zd-RVG" customClass="MappingText">
                                     <rect key="frame" x="10" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="Hsg-f0-thX">
@@ -1216,6 +1287,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="XWW-Gm-peF"/>
+                                    </connections>
                                 </textField>
                                 <button id="47q-eU-TsV">
                                     <rect key="frame" x="54" y="51" width="40" height="40"/>
@@ -1228,7 +1302,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="vQY-B6-ImG"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="JP8-bw-y1j">
+                                <textField verticalHuggingPriority="750" id="JP8-bw-y1j" customClass="MappingText">
                                     <rect key="frame" x="54" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="UZX-rJ-wjW">
@@ -1236,6 +1310,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="hrR-vh-dLH"/>
+                                    </connections>
                                 </textField>
                                 <button id="bNz-K0-Rqo">
                                     <rect key="frame" x="98" y="51" width="40" height="40"/>
@@ -1248,7 +1325,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="CLz-wD-Umt"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="T2t-1I-NJX">
+                                <textField verticalHuggingPriority="750" id="T2t-1I-NJX" customClass="MappingText">
                                     <rect key="frame" x="98" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="Vw6-cF-tCr">
@@ -1256,6 +1333,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="nIe-OS-8Dj"/>
+                                    </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="DBe-jH-ICg">
                                     <rect key="frame" x="164" y="31" width="41" height="18"/>
@@ -1292,7 +1372,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="QYa-69-j9H"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="mVd-KA-6sF">
+                                <textField verticalHuggingPriority="750" id="mVd-KA-6sF" customClass="MappingText">
                                     <rect key="frame" x="301" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="vmk-rj-Emk">
@@ -1300,6 +1380,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Yej-d0-HWz"/>
+                                    </connections>
                                 </textField>
                                 <button id="jC7-9Z-4nZ">
                                     <rect key="frame" x="345" y="51" width="40" height="40"/>
@@ -1312,7 +1395,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="Qhe-Oi-xF7"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="UTq-wI-ER5">
+                                <textField verticalHuggingPriority="750" id="UTq-wI-ER5" customClass="MappingText">
                                     <rect key="frame" x="345" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="xT4-kp-AhL">
@@ -1320,8 +1403,11 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Kcv-Wq-M5L"/>
+                                    </connections>
                                 </textField>
-                                <textField verticalHuggingPriority="750" id="G6G-GM-5vE">
+                                <textField verticalHuggingPriority="750" id="G6G-GM-5vE" customClass="MappingText">
                                     <rect key="frame" x="389" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="oph-Z3-OxX">
@@ -1329,6 +1415,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="0mp-vb-Ha8"/>
+                                    </connections>
                                 </textField>
                                 <button id="aqP-ba-Dlk">
                                     <rect key="frame" x="257" y="159" width="40" height="40"/>
@@ -1341,7 +1430,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="D1n-Wu-W1N"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="e9c-tz-5yC">
+                                <textField verticalHuggingPriority="750" id="e9c-tz-5yC" customClass="MappingText">
                                     <rect key="frame" x="257" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="m" drawsBackground="YES" id="KPz-Wk-mwd">
@@ -1349,6 +1438,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="XQE-uj-yzG"/>
+                                    </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="MbJ-p3-iJJ">
                                     <rect key="frame" x="200" y="139" width="40" height="18"/>
@@ -1373,7 +1465,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="vQz-aZ-zw4"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="Dnf-Rw-Yy0">
+                                <textField verticalHuggingPriority="750" id="Dnf-Rw-Yy0" customClass="MappingText">
                                     <rect key="frame" x="300" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="," drawsBackground="YES" id="DSo-fg-30o">
@@ -1381,6 +1473,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="PWs-sK-CBo"/>
+                                    </connections>
                                 </textField>
                                 <button id="1fa-ER-TTe">
                                     <rect key="frame" x="344" y="159" width="41" height="40"/>
@@ -1393,7 +1488,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="aV7-95-uZv"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="05L-qP-qXt">
+                                <textField verticalHuggingPriority="750" id="05L-qP-qXt" customClass="MappingText">
                                     <rect key="frame" x="345" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="." drawsBackground="YES" id="G5O-YB-DBK">
@@ -1401,6 +1496,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="E2s-KV-byf"/>
+                                    </connections>
                                 </textField>
                                 <button id="Og0-OT-sgd">
                                     <rect key="frame" x="388" y="159" width="40" height="40"/>
@@ -1413,7 +1511,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="erG-eW-Mht"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="A5C-TZ-9RS">
+                                <textField verticalHuggingPriority="750" id="A5C-TZ-9RS" customClass="MappingText">
                                     <rect key="frame" x="388" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="/" drawsBackground="YES" id="5p1-nu-S9t">
@@ -1421,6 +1519,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="dJ9-qJ-1VZ"/>
+                                    </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="bcY-zM-3EN">
                                     <rect key="frame" x="257" y="119" width="40" height="18"/>
@@ -1472,7 +1573,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="kOn-nN-K9x"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="Zp2-mP-J7f">
+                                <textField verticalHuggingPriority="750" id="Zp2-mP-J7f" customClass="MappingText">
                                     <rect key="frame" x="145" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="BKSP" drawsBackground="YES" id="cdj-ZW-wk3">
@@ -1480,6 +1581,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="YjN-F8-VVa"/>
+                                    </connections>
                                 </textField>
                                 <button id="QVA-kq-Y69">
                                     <rect key="frame" x="100" y="159" width="41" height="40"/>
@@ -1492,7 +1596,7 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="vpq-tj-gdm"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="nnU-AK-qgw">
+                                <textField verticalHuggingPriority="750" id="nnU-AK-qgw" customClass="MappingText">
                                     <rect key="frame" x="101" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="↩" drawsBackground="YES" id="lSc-eZ-khP">
@@ -1500,6 +1604,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Bdl-6d-CTk"/>
+                                    </connections>
                                 </textField>
                                 <button id="RY6-Vt-yS8">
                                     <rect key="frame" x="56" y="159" width="41" height="40"/>
@@ -1575,7 +1682,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <sliderCell key="cell" alignment="left" maxValue="1" tickMarkPosition="right" sliderType="linear" id="hMq-jC-g0a"/>
                                 </slider>
-                                <textField verticalHuggingPriority="750" id="JFR-kp-5gl">
+                                <textField verticalHuggingPriority="750" id="JFR-kp-5gl" customClass="MappingText">
                                     <rect key="frame" x="57" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="Space" drawsBackground="YES" id="7T2-6M-kQJ">
@@ -1583,6 +1690,9 @@
                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="kVi-VV-IUW"/>
+                                    </connections>
                                 </textField>
                                 <button id="wvS-gw-2t3">
                                     <rect key="frame" x="263" y="197" width="30" height="30"/>
@@ -1746,6 +1856,28 @@
                             <rect key="frame" x="1" y="1" width="349" height="101"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
+                                <button id="G8S-Op-GDy">
+                                    <rect key="frame" x="-47" y="-395" width="800" height="530"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bAL-3C-SuW">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedBGButton:" target="Voe-Tx-rLC" id="JQc-TR-GyO"/>
+                                    </connections>
+                                </button>
+                                <button id="FbT-dX-DPC">
+                                    <rect key="frame" x="-37" y="-405" width="800" height="530"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="gdL-Gh-Yla">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedBGButton:" target="Voe-Tx-rLC" id="cO0-60-7FJ"/>
+                                    </connections>
+                                </button>
                                 <textField verticalHuggingPriority="750" id="IJz-Pk-ebr">
                                     <rect key="frame" x="55" y="72" width="259" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1845,6 +1977,17 @@
                             <rect key="frame" x="1" y="1" width="349" height="238"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
+                                <button id="7N4-Be-hdo">
+                                    <rect key="frame" x="-345" y="-271" width="800" height="530"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="r2C-3z-Joz">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedBGButton:" target="Voe-Tx-rLC" id="tBK-p7-UUk"/>
+                                    </connections>
+                                </button>
                                 <textField verticalHuggingPriority="750" id="2SU-aD-OR9">
                                     <rect key="frame" x="13" y="190" width="96" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

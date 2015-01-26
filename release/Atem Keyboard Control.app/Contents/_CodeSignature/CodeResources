@@ -10,13 +10,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		MSu2/+/RoimfTDkTHEl4mCJgUBU=
+		XEUITNIYutyJdA4CNGDTcsV6dmk=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ag0MzFZ4nmedumqLAylDCQ4FWYQ=
+			RHfgo4UihHl9wVsDuA/9rf2oOAo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -60,6 +60,10 @@
 		<key>Resources/upArrow.png</key>
 		<data>
 		ShwUPKBnOtFkXkVpseGbEpZk1HI=
+		</data>
+		<key>Resources/virtualKeyboard.nib</key>
+		<data>
+		rMB4aqn9C7HFGkVTNtyTC1xikUQ=
 		</data>
 		<key>Resources/yellowButton.png</key>
 		<data>
@@ -74,13 +78,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		MSu2/+/RoimfTDkTHEl4mCJgUBU=
+		XEUITNIYutyJdA4CNGDTcsV6dmk=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ag0MzFZ4nmedumqLAylDCQ4FWYQ=
+			RHfgo4UihHl9wVsDuA/9rf2oOAo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -124,6 +128,10 @@
 		<key>Resources/upArrow.png</key>
 		<data>
 		ShwUPKBnOtFkXkVpseGbEpZk1HI=
+		</data>
+		<key>Resources/virtualKeyboard.nib</key>
+		<data>
+		rMB4aqn9C7HFGkVTNtyTC1xikUQ=
 		</data>
 		<key>Resources/yellowButton.png</key>
 		<data>

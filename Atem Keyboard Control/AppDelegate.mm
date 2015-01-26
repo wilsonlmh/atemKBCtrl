@@ -371,12 +371,79 @@ private:
 
 @implementation AppDelegate
 
+-(void)setupNSUserDefaults {
+    if ([[NSUserDefaults standardUserDefaults] arrayForKey:@"cmdKBMapping"]) {
+        cmdKBMapping = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:@"cmdKBMapping"]];
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMBlack"] != -1) { textPGMBlack.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMBlack"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh1"] != -1) { textPGMCh1.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh1"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh2"] != -1) { textPGMCh2.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh2"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh3"] != -1) { textPGMCh3.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh3"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh4"] != -1) { textPGMCh4.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh4"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh5"] != -1) { textPGMCh5.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh5"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMCh6"] != -1) { textPGMCh6.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMCh6"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMColoA"] != -1) { textPGMColorA.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMColorA"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PGMColorB"] != -1) { textPGMColorB.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PGMColorB"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVBlack"] != -1) { textPRVBlack.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVBlack"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh1"] != -1) { textPRVCh1.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh1"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh2"] != -1) { textPRVCh2.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh2"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh3"] != -1) { textPRVCh3.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh3"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh4"] != -1) { textPRVCh4.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh4"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh5"] != -1) { textPRVCh5.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh5"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVCh6"] != -1) { textPRVCh6.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVCh6"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVColorA"] != -1) { textPRVColorA.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVColorA"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"PRVColorB"] != -1) { textPRVColorB.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"PRVColorB"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSHold"] != -1) { textTRANSHold.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSHold"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSAuto"] != -1) { textTRANSAuto.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSAuto"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSCut"] != -1) { textTRANSCut.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSCut"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSPreview"] != -1) { textTRANSPreview.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSPreview"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSMix"] != -1) { textTRANSMix.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSMix"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSDip"] != -1) { textTRANSDip.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSDip"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSWipe"] != -1) { textTRANSWipe.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSWipe"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"TRANSDve"] != -1) { textTRANSDve.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"TRANSDve"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK1Preview"] != -1) { textDSK1Preview.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK1Preview"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK1On"] != -1) { textDSK1On.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK1On"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK1Auto"] != -1) { textDSK1Auto.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK1Auto"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK2Preview"] != -1) { textDSK2Preview.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK2Preview"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK2On"] != -1) { textDSK2On.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK2On"]]; }
+        if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK2Auto"] != -1) { textDSK2Auto.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK2Auto"]]; }
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Black"]) {
+        mixerCurrentStatus.Black = [[NSUserDefaults standardUserDefaults] integerForKey:@"Black"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch1"]) {
+        mixerCurrentStatus.Ch1 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch1"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch2"]) {
+        mixerCurrentStatus.Ch2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch2"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch3"]) {
+        mixerCurrentStatus.Ch3 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch3"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch4"]) {
+        mixerCurrentStatus.Ch4 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch4"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch5"]) {
+        mixerCurrentStatus.Ch5 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch5"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch6"]) {
+        mixerCurrentStatus.Ch6 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch6"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"ColorA"]) {
+        mixerCurrentStatus.ColorA = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorA"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"ColorB"]) {
+        mixerCurrentStatus.ColorB = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorB"];
+    }
+}
+
 -(void)setupValues {
     isKBControlling = false;
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
     mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,2001,2002,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
     PreferenceWindow = [[preferenceWindow alloc] initWithWindowNibName:@"preferenceWindow"];
+    VirtualKeyboard = [[virtualKeyboard alloc] initWithWindowNibName:@"virtualKeyboard"];
+    
     {
         kbShortName[0]=@"a";
         kbShortName[11]=@"b";
@@ -420,7 +487,7 @@ private:
         kbShortName[30]=@"]";
         kbShortName[42]=@"\\";
         kbShortName[41]=@";";
-        kbShortName[39]=@"‘";
+        kbShortName[39]=@"'";
         kbShortName[43]=@",";
         kbShortName[47]=@".";
         kbShortName[44]=@"/";
@@ -463,6 +530,10 @@ private:
         kbShortName[61]=@"R⌥";
         kbShortName[57]=@"CLock";
         kbShortName[63]=@"Fn";
+        kbShortName[116]=@"PgUp";
+        kbShortName[121]=@"PgDn";
+        kbShortName[115]=@"Home";
+        kbShortName[119]=@"End";
     }
     
     mSwitcherDiscovery = NULL;
@@ -482,7 +553,7 @@ private:
     {
         NSLog(@"Cannot create mSwitcherDiscovery instance!");
     }
-    
+    [self setupNSUserDefaults];
     [self updateKBMappings];
     
 }
@@ -1094,6 +1165,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 }
 
 - (IBAction)clickedUIToggleAction:(NSButton*)sender {
+    [VirtualKeyboard close];
     if (isKBControlling) {
         isKBControlling = !isKBControlling;
         [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
@@ -1118,6 +1190,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 }
 
 - (IBAction)clickedChangeIP:(id)sender {
+    [VirtualKeyboard close];
     mixerCurrentStatus.IP = textIP.stringValue;
     [self mixerDisconnected];
 }
@@ -1295,6 +1368,23 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [PreferenceWindow loadWindow];
     [PreferenceWindow refreshConfig:preferenceChannels label:preferenceLabel config:configArray isConnected:mixerCurrentStatus.Connected];
     [PreferenceWindow showWindow:nil];
+}
+
+-(IBAction)clickedBGButton:(id)sender {
+    [VirtualKeyboard close];
+}
+
+-(IBAction)focusedMappingText:(NSNotification *)notification {
+    [VirtualKeyboard close];
+    NSPoint windowPt = [[notification object] frame].origin;
+    windowPt.y = windowPt.y + 150;
+    windowPt.x = windowPt.x - 1000;
+    [[VirtualKeyboard window] setFrameOrigin:windowPt];
+    [VirtualKeyboard showWindow:[notification object] cmdKBMapping:cmdKBMapping kbShortName:kbShortName];
+}
+
+-(IBAction)changedTextKeys:(id)sender {
+    [self updateKBMappings];
 }
 
 -(void)updateMixerCurrentStatus {
@@ -1985,11 +2075,36 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowLostFocus) name:NSWindowDidResignMainNotification object:window];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferenceWindowClickedApplyButton) name:@"preferenceWindowClickedApplyButton" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(focusedMappingText:) name:@"MappingTextGotFirstResponder" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateKBMappings) name:@"shouldUpdateKeyMapping" object:nil];
     //[window becomeFirstResponder];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    [self updateKBMappings];
+    [[NSUserDefaults standardUserDefaults] setObject:cmdKBMapping forKey:@"cmdKBMapping"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch1"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch2"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch3"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch4"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch5"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch6"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Black forKey:@"Black"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.ColorA forKey:@"ColorA"];
+    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.ColorB forKey:@"ColorB"];
+}
+
+@end
+
+
+@implementation MappingText
+
+
+
+-(BOOL)becomeFirstResponder {
+    BOOL ret = [super becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"MappingTextGotFirstResponder" object:self];
+    return ret;
 }
 
 @end

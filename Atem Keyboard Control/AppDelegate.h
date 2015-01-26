@@ -9,9 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "BMDSwitcherAPI.h"
 #import <list>
-#include <string>
-#include <libkern/OSAtomic.h>
+#import <string>
+#import <libkern/OSAtomic.h>
 #import "preferenceWindow.h"
+#import "virtualKeyboard.h"
 
 class MixEffectBlockMonitor;
 class SwitcherMonitor;
@@ -120,6 +121,7 @@ class DSKMonitor;
     bool                    isKBControlling;
     bool                    isMouseControlling;
     bool                    isReverseSlider;
+    bool                    isReversedSlider;
     NSMutableArray*         kbShortName;
     NSMutableArray*         cmdKBMapping;
     NSEvent*                kbLocalDownHandle;
@@ -135,6 +137,7 @@ class DSKMonitor;
     float                   floatFadeOutCount;
     double                  lastTransitionStage;
     preferenceWindow*       PreferenceWindow;
+    virtualKeyboard*        VirtualKeyboard;
     
     //preference
     NSMutableArray*         preferenceLabel;
@@ -212,7 +215,9 @@ class DSKMonitor;
 -(IBAction)clickedDownArraow:(NSButton*)sender;
 -(IBAction)changedDuration:(NSTextField*)sender;
 -(IBAction)clickedMenuPreferences:(id)sender;
-
+-(IBAction)clickedBGButton:(id)sender;
+-(IBAction)focusedMappingText:(NSTextField*)sender;
+-(IBAction)changedTextKeys:(id)sender;
 
 //ATEM Methods
 -(void)updateUIbetweenMixer;
@@ -224,7 +229,7 @@ class DSKMonitor;
 -(void)mouseMoving;
 
 //UI <-> AppDelegate Methods
-
+-(void)setupNSUserDefaults;
 -(void)toggleMouseMonitor;
 -(void)toggleAllMappingKBNameTextField;
 -(void)toggleUIConnectionAllTextField;
@@ -242,3 +247,10 @@ class DSKMonitor;
 
 @end
 
+
+@interface MappingText : NSTextField {
+    
+}
+
+
+@end

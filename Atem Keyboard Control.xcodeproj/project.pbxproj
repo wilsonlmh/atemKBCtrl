@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DDFC81A75706400C319FA /* preferenceWindow.m */; };
 		C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83DDFC91A75706400C319FA /* preferenceWindow.xib */; };
+		C83DDFD41A768DC700C319FA /* virtualKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DDFD21A768DC700C319FA /* virtualKeyboard.m */; };
+		C83DDFD51A768DC700C319FA /* virtualKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83DDFD31A768DC700C319FA /* virtualKeyboard.xib */; };
 		C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AC1A70F8BD001E6D25 /* topBar.png */; };
 		C84800AF1A70FD00001E6D25 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AE1A70FD00001E6D25 /* bar.png */; };
 		C84800B21A710261001E6D25 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B01A710261001E6D25 /* downArrow.png */; };
@@ -41,6 +43,9 @@
 		C83DDFC71A75706400C319FA /* preferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferenceWindow.h; sourceTree = "<group>"; };
 		C83DDFC81A75706400C319FA /* preferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferenceWindow.m; sourceTree = "<group>"; };
 		C83DDFC91A75706400C319FA /* preferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferenceWindow.xib; sourceTree = "<group>"; };
+		C83DDFD11A768DC700C319FA /* virtualKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtualKeyboard.h; sourceTree = "<group>"; };
+		C83DDFD21A768DC700C319FA /* virtualKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = virtualKeyboard.m; sourceTree = "<group>"; };
+		C83DDFD31A768DC700C319FA /* virtualKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = virtualKeyboard.xib; sourceTree = "<group>"; };
 		C84800AC1A70F8BD001E6D25 /* topBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBar.png; sourceTree = "<group>"; };
 		C84800AE1A70FD00001E6D25 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		C84800B01A710261001E6D25 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
@@ -106,6 +111,9 @@
 		C8BC03561A6AA6BA00D26560 /* Atem Keyboard Control */ = {
 			isa = PBXGroup;
 			children = (
+				C83DDFD11A768DC700C319FA /* virtualKeyboard.h */,
+				C83DDFD21A768DC700C319FA /* virtualKeyboard.m */,
+				C83DDFD31A768DC700C319FA /* virtualKeyboard.xib */,
 				C83DDFC81A75706400C319FA /* preferenceWindow.m */,
 				C83DDFC71A75706400C319FA /* preferenceWindow.h */,
 				C83DDFC91A75706400C319FA /* preferenceWindow.xib */,
@@ -260,6 +268,7 @@
 			files = (
 				C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */,
 				C84800AF1A70FD00001E6D25 /* bar.png in Resources */,
+				C83DDFD51A768DC700C319FA /* virtualKeyboard.xib in Resources */,
 				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
 				C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */,
 				C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */,
@@ -292,6 +301,7 @@
 				C8BC035D1A6AA6BA00D26560 /* main.m in Sources */,
 				C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */,
 				C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */,
+				C83DDFD41A768DC700C319FA /* virtualKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

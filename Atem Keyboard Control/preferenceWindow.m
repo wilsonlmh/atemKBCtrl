@@ -35,11 +35,11 @@
         mappingConfig[6] = (int)popupCh6.selectedTag;
         mappingConfig[7] = (int)popupColorA.selectedTag;
         mappingConfig[8] = (int)popupColorB.selectedTag;
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"preferenceWindowClickedApplyButton" object:self];
     } else {
         isClickedApplyButton = false;
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"preferenceWindowClickedApplyButton" object:nil];
+
     [self close];
 }
 
