@@ -138,7 +138,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit testing" keyEquivalent="q" id="4sb-4s-VLi" userLabel="Quit  ATEM Keyboard Control">
+                            <menuItem title="Quit ATEM Keyboard Control" keyEquivalent="q" id="4sb-4s-VLi" userLabel="Quit  ATEM Keyboard Control">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>

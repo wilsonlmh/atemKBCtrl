@@ -162,20 +162,15 @@ class DSKMonitor;
     IBMDSwitcherTransitionDipParameters* mTransitionDipParameters;
     IBMDSwitcherTransitionDVEParameters* mTransitionDVEParameters;
     
+    
+    config currentConfig;
+    
     struct mixerCurrentStatus {
         bool Connected;
         __unsafe_unretained NSString* IP;
         __unsafe_unretained NSString* Name;
         int frameRate;
-        BMDSwitcherInputId Black; //typdef int64_t BMDSwitcherInputId
-        BMDSwitcherInputId Ch1;
-        BMDSwitcherInputId Ch2;
-        BMDSwitcherInputId Ch3;
-        BMDSwitcherInputId Ch4;
-        BMDSwitcherInputId Ch5;
-        BMDSwitcherInputId Ch6;
-        BMDSwitcherInputId ColorA;
-        BMDSwitcherInputId ColorB;
+        
         int PGMCh; //0:Black,1-6:Ch,7-8:ColorA/B
         int PRVCh; //0:Black,1-6:Ch,7-8:ColorA/B
         double TRANSStage; //0:Begin, 1:End
@@ -196,7 +191,7 @@ class DSKMonitor;
         bool DSK2On;
         uint32_t DSK2RollingFrames; // <0:Not rolling
         uint32_t DSK2Duration;
-        //{false,@"",@"",0,0,1,2,3,4,5,6,7,8,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
+        //{false,@"",@"",0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
 
     }mixerCurrentStatus;
     
@@ -242,6 +237,7 @@ class DSKMonitor;
 -(void)toggleKeyListening:(int)type;
 -(void)windowLostFocus;
 -(void)preferenceWindowClickedApplyButton;
+-(void)saveNSUserDefaults;
 //-(void)appLog:(NSString*)content;
 
 

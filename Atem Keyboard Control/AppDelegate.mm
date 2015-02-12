@@ -408,31 +408,34 @@ private:
         if ([self kbShortNameSearch:cmdKBMapping obj:@"DSK2Auto"] != -1) { textDSK2Auto.stringValue = [kbShortName objectAtIndex:[self kbShortNameSearch:cmdKBMapping obj:@"DSK2Auto"]]; }
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Black"]) {
-        mixerCurrentStatus.Black = [[NSUserDefaults standardUserDefaults] integerForKey:@"Black"];
+        currentConfig.Black = [[NSUserDefaults standardUserDefaults] integerForKey:@"Black"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch1"]) {
-        mixerCurrentStatus.Ch1 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch1"];
+        currentConfig.Ch1 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch1"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch2"]) {
-        mixerCurrentStatus.Ch2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch2"];
+        currentConfig.Ch2 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch2"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch3"]) {
-        mixerCurrentStatus.Ch3 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch3"];
+        currentConfig.Ch3 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch3"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch4"]) {
-        mixerCurrentStatus.Ch4 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch4"];
+        currentConfig.Ch4 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch4"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch5"]) {
-        mixerCurrentStatus.Ch5 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch5"];
+        currentConfig.Ch5 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch5"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"Ch6"]) {
-        mixerCurrentStatus.Ch6 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch6"];
+        currentConfig.Ch6 = [[NSUserDefaults standardUserDefaults] integerForKey:@"Ch6"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"ColorA"]) {
-        mixerCurrentStatus.ColorA = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorA"];
+        currentConfig.ColorA = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorA"];
     }
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"ColorB"]) {
-        mixerCurrentStatus.ColorB = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorB"];
+        currentConfig.ColorB = [[NSUserDefaults standardUserDefaults] integerForKey:@"ColorB"];
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"slidingRate"]) {
+        currentConfig.slidingRate = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"slidingRate"];
     }
 }
 
@@ -440,7 +443,8 @@ private:
     isKBControlling = false;
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
-    mixerCurrentStatus = {false,@"",@"",0,0,1,2,3,4,5,6,2001,2002,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    mixerCurrentStatus = {false,@"",@"",0,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
+    currentConfig = {0,1,2,3,4,5,6,2001,2002,300};
     PreferenceWindow = [[preferenceWindow alloc] initWithWindowNibName:@"preferenceWindow"];
     VirtualKeyboard = [[virtualKeyboard alloc] initWithWindowNibName:@"virtualKeyboard"];
     
@@ -502,11 +506,11 @@ private:
         kbShortName[83]=@"Num1";
         kbShortName[84]=@"Num2";
         kbShortName[85]=@"Num3";
-        kbShortName[86]=@"Num3";
-        kbShortName[87]=@"Num4";
-        kbShortName[88]=@"Num5";
-        kbShortName[89]=@"Num6";
-        kbShortName[90]=@"Num7";
+        kbShortName[86]=@"Num4";
+        kbShortName[87]=@"Num5";
+        kbShortName[88]=@"Num6";
+        kbShortName[89]=@"Num7";
+        //kbShortName[90]=@"Num7";
         kbShortName[91]=@"Num8";
         kbShortName[92]=@"Num9";
         kbShortName[78]=@"Num-";
@@ -736,58 +740,58 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                                        }
                                    },
                                    @"PGMBlack" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Black);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Black);
                                    },
                                    @"PGMCh1" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch1);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch1);
                                    },
                                    @"PGMCh2" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch2);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch2);
                                    },
                                    @"PGMCh3" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch3);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch3);
                                    },
                                    @"PGMCh4" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch4);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch4);
                                    },
                                    @"PGMCh5" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch5);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch5);
                                    },
                                    @"PGMCh6" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.Ch6);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.Ch6);
                                    },
                                    @"PGMColorA" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.ColorA);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.ColorA);
                                    },
                                    @"PGMColorB" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, mixerCurrentStatus.ColorB);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdProgramInput, currentConfig.ColorB);
                                    },
                                    @"PRVBlack" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Black);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Black);
                                    },
                                    @"PRVCh1" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch1);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch1);
                                    },
                                    @"PRVCh2" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch2);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch2);
                                    },
                                    @"PRVCh3" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch3);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch3);
                                    },
                                    @"PRVCh4" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch4);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch4);
                                    },
                                    @"PRVCh5" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch5);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch5);
                                    },
                                    @"PRVCh6" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.Ch6);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.Ch6);
                                    },
                                    @"PRVColorA" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.ColorA);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.ColorA);
                                    },
                                    @"PRVColorB" : ^ {
-                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, mixerCurrentStatus.ColorB);
+                                       mMixEffectBlock->SetInt(bmdSwitcherMixEffectBlockPropertyIdPreviewInput, currentConfig.ColorB);
                                    },
                                    @"TRANSAuto" : ^ {
                                        mMixEffectBlock->PerformAutoTransition();
@@ -896,7 +900,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         mMixEffectBlock->GetFloat(bmdSwitcherMixEffectBlockPropertyIdTransitionPosition, &onlineMouseY);
         baseMouseY = onlineMouseY;
         if ((lastOnlineMouseY > onlineMouseY) && (onlineMouseY > 0)) { baseMouseY = lastOnlineMouseY;}
-        deltaMouseY = (double)((currentMouseY - lastMouseY)/300);
+        deltaMouseY = (double)((currentMouseY - lastMouseY)/currentConfig.slidingRate);
         if (isReverseSlider) { deltaMouseY =  -deltaMouseY; };
         deltaMouseY = baseMouseY + deltaMouseY;
         if (deltaMouseY > 1) { deltaMouseY = 1; }
@@ -1363,10 +1367,10 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         
         inputIterator->Release();
     }
-    NSArray* configArray = @[[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Black],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch1],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch2],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch3],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch4],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch5],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.Ch6],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.ColorA],[NSString stringWithFormat:@"%lld",mixerCurrentStatus.ColorB]];
+    //NSArray* configArray = @[[NSString stringWithFormat:@"%lld",currentConfig.Black],[NSString stringWithFormat:@"%lld",currentConfig.Ch1],[NSString stringWithFormat:@"%lld",currentConfig.Ch2],[NSString stringWithFormat:@"%lld",currentConfig.Ch3],[NSString stringWithFormat:@"%lld",currentConfig.Ch4],[NSString stringWithFormat:@"%lld",currentConfig.Ch5],[NSString stringWithFormat:@"%lld",currentConfig.Ch6],[NSString stringWithFormat:@"%lld",currentConfig.ColorA],[NSString stringWithFormat:@"%lld",currentConfig.ColorB]];
     
     [PreferenceWindow loadWindow];
-    [PreferenceWindow refreshConfig:preferenceChannels label:preferenceLabel config:configArray isConnected:mixerCurrentStatus.Connected];
+    [PreferenceWindow refreshConfig:preferenceChannels label:preferenceLabel config:currentConfig isConnected:mixerCurrentStatus.Connected];
     [PreferenceWindow showWindow:nil];
 }
 
@@ -1464,43 +1468,43 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
                 break;
         }
         
-        if (PRV == mixerCurrentStatus.Black) {
+        if (PRV == currentConfig.Black) {
             mixerCurrentStatus.PRVCh = 0;
-        } else if (PRV == mixerCurrentStatus.Ch1) {
+        } else if (PRV == currentConfig.Ch1) {
             mixerCurrentStatus.PRVCh = 1;
-        } else if (PRV == mixerCurrentStatus.Ch2) {
+        } else if (PRV == currentConfig.Ch2) {
             mixerCurrentStatus.PRVCh = 2;
-        } else if (PRV == mixerCurrentStatus.Ch3) {
+        } else if (PRV == currentConfig.Ch3) {
             mixerCurrentStatus.PRVCh = 3;
-        } else if (PRV == mixerCurrentStatus.Ch4) {
+        } else if (PRV == currentConfig.Ch4) {
             mixerCurrentStatus.PRVCh = 4;
-        } else if (PRV == mixerCurrentStatus.Ch5) {
+        } else if (PRV == currentConfig.Ch5) {
             mixerCurrentStatus.PRVCh = 5;
-        } else if (PRV == mixerCurrentStatus.Ch6) {
+        } else if (PRV == currentConfig.Ch6) {
             mixerCurrentStatus.PRVCh = 6;
-        } else if (PRV == mixerCurrentStatus.ColorA) {
+        } else if (PRV == currentConfig.ColorA) {
             mixerCurrentStatus.PRVCh = 7;
-        } else if (PRV == mixerCurrentStatus.ColorB) {
+        } else if (PRV == currentConfig.ColorB) {
             mixerCurrentStatus.PRVCh = 8;
         }
         
-        if (PGM == mixerCurrentStatus.Black) {
+        if (PGM == currentConfig.Black) {
             mixerCurrentStatus.PGMCh = 0;
-        } else if (PGM == mixerCurrentStatus.Ch1) {
+        } else if (PGM == currentConfig.Ch1) {
             mixerCurrentStatus.PGMCh = 1;
-        } else if (PGM == mixerCurrentStatus.Ch2) {
+        } else if (PGM == currentConfig.Ch2) {
             mixerCurrentStatus.PGMCh = 2;
-        } else if (PGM == mixerCurrentStatus.Ch3) {
+        } else if (PGM == currentConfig.Ch3) {
             mixerCurrentStatus.PGMCh = 3;
-        } else if (PGM == mixerCurrentStatus.Ch4) {
+        } else if (PGM == currentConfig.Ch4) {
             mixerCurrentStatus.PGMCh = 4;
-        } else if (PGM == mixerCurrentStatus.Ch5) {
+        } else if (PGM == currentConfig.Ch5) {
             mixerCurrentStatus.PGMCh = 5;
-        } else if (PGM == mixerCurrentStatus.Ch6) {
+        } else if (PGM == currentConfig.Ch6) {
             mixerCurrentStatus.PGMCh = 6;
-        } else if (PGM == mixerCurrentStatus.ColorA) {
+        } else if (PGM == currentConfig.ColorA) {
             mixerCurrentStatus.PGMCh = 7;
-        } else if (PGM == mixerCurrentStatus.ColorB) {
+        } else if (PGM == currentConfig.ColorB) {
             mixerCurrentStatus.PGMCh = 8;
         }
         
@@ -2052,18 +2056,28 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 }
 
 -(void)preferenceWindowClickedApplyButton {
+    
     if ((PreferenceWindow->isClickedApplyButton) && (mixerCurrentStatus.Connected)) {
-        mixerCurrentStatus.Black = PreferenceWindow->mappingConfig[0];
-        mixerCurrentStatus.Ch1 = PreferenceWindow->mappingConfig[1];
-        mixerCurrentStatus.Ch2 = PreferenceWindow->mappingConfig[2];
-        mixerCurrentStatus.Ch3 = PreferenceWindow->mappingConfig[3];
-        mixerCurrentStatus.Ch4 = PreferenceWindow->mappingConfig[4];
-        mixerCurrentStatus.Ch5 = PreferenceWindow->mappingConfig[5];
-        mixerCurrentStatus.Ch6 = PreferenceWindow->mappingConfig[6];
-        mixerCurrentStatus.ColorA = PreferenceWindow->mappingConfig[7];
-        mixerCurrentStatus.ColorB = PreferenceWindow->mappingConfig[8];
-        
+        currentConfig = PreferenceWindow->preferenceConfig;
     }
+    
+    currentConfig.slidingRate = PreferenceWindow->preferenceConfig.slidingRate;
+    
+    [self saveNSUserDefaults];
+}
+
+-(void)saveNSUserDefaults {
+    [[NSUserDefaults standardUserDefaults] setObject:cmdKBMapping forKey:@"cmdKBMapping"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch1 forKey:@"Ch1"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch2 forKey:@"Ch2"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch3 forKey:@"Ch3"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch4 forKey:@"Ch4"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch5 forKey:@"Ch5"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Ch6 forKey:@"Ch6"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.Black forKey:@"Black"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.ColorA forKey:@"ColorA"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.ColorB forKey:@"ColorB"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.slidingRate forKey:@"slidingRate"];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -2082,16 +2096,8 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [self updateKBMappings];
-    [[NSUserDefaults standardUserDefaults] setObject:cmdKBMapping forKey:@"cmdKBMapping"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch1"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch2"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch3"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch4"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch5"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Ch1 forKey:@"Ch6"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.Black forKey:@"Black"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.ColorA forKey:@"ColorA"];
-    [[NSUserDefaults standardUserDefaults] setInteger:mixerCurrentStatus.ColorB forKey:@"ColorB"];
+    [self saveNSUserDefaults];
+    
 }
 
 @end
