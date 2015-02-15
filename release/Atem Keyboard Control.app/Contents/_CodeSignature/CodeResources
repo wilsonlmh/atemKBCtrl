@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		KU7IqxM8yb8/qf6QEP7/aCurw6E=
+		OHhecaapPG3pP/guSHmykKEKWvE=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
@@ -32,6 +32,10 @@
 		<key>Resources/blackNSButton.png</key>
 		<data>
 		oJhI1t/KTkRQqk2z/7jtKftmlRQ=
+		</data>
+		<key>Resources/blackNSButtonClicked.png</key>
+		<data>
+		J5o2VECcy2kvF9JnVMqguuLBkD8=
 		</data>
 		<key>Resources/blueButton.png</key>
 		<data>
@@ -82,7 +86,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		KU7IqxM8yb8/qf6QEP7/aCurw6E=
+		OHhecaapPG3pP/guSHmykKEKWvE=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
@@ -104,6 +108,10 @@
 		<key>Resources/blackNSButton.png</key>
 		<data>
 		oJhI1t/KTkRQqk2z/7jtKftmlRQ=
+		</data>
+		<key>Resources/blackNSButtonClicked.png</key>
+		<data>
+		J5o2VECcy2kvF9JnVMqguuLBkD8=
 		</data>
 		<key>Resources/blueButton.png</key>
 		<data>
