@@ -22,3 +22,10 @@
 -(IBAction)clickedKeyButton:(NSButton*)sender;
 
 @end
+
+@interface blackNSButtonCell : NSButtonCell {
+    
+}
+
+
+@end

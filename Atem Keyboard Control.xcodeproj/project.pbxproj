@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81BCE391A914386007714E9 /* blackNSButtonClicked.png in Resources */ = {isa = PBXBuildFile; fileRef = C81BCE381A914386007714E9 /* blackNSButtonClicked.png */; };
 		C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DDFC81A75706400C319FA /* preferenceWindow.m */; };
 		C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83DDFC91A75706400C319FA /* preferenceWindow.xib */; };
 		C83DDFD41A768DC700C319FA /* virtualKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C83DDFD21A768DC700C319FA /* virtualKeyboard.m */; };
@@ -22,6 +23,8 @@
 		C8BC036E1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC036D1A6AA6BA00D26560 /* Atem_Keyboard_ControlTests.m */; };
 		C8BC03B21A6ABB2100D26560 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8BC03B01A6ABB2100D26560 /* MainMenu.xib */; };
 		C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BC03B81A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp */; };
+		C8D36A561A913A44003CDD38 /* blackNSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D36A551A913A44003CDD38 /* blackNSButton.m */; };
+		C8D36A581A913F29003CDD38 /* blackNSButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D36A571A913F29003CDD38 /* blackNSButton.png */; };
 		C8D712BF1A6EE206005BC2F9 /* blackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BA1A6EE206005BC2F9 /* blackButton.png */; };
 		C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BB1A6EE206005BC2F9 /* greenButton.png */; };
 		C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D712BC1A6EE206005BC2F9 /* normalButton.png */; };
@@ -40,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C81BCE381A914386007714E9 /* blackNSButtonClicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackNSButtonClicked.png; sourceTree = "<group>"; };
 		C83DDFC71A75706400C319FA /* preferenceWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preferenceWindow.h; sourceTree = "<group>"; };
 		C83DDFC81A75706400C319FA /* preferenceWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preferenceWindow.m; sourceTree = "<group>"; };
 		C83DDFC91A75706400C319FA /* preferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = preferenceWindow.xib; sourceTree = "<group>"; };
@@ -63,6 +67,9 @@
 		C8BC03B11A6ABB2100D26560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C8BC03B71A6BEC0600D26560 /* BMDSwitcherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDSwitcherAPI.h; sourceTree = "<group>"; };
 		C8BC03B81A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BMDSwitcherAPIDispatch.cpp; sourceTree = "<group>"; };
+		C8D36A541A913A44003CDD38 /* blackNSButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blackNSButton.h; sourceTree = "<group>"; };
+		C8D36A551A913A44003CDD38 /* blackNSButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blackNSButton.m; sourceTree = "<group>"; };
+		C8D36A571A913F29003CDD38 /* blackNSButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackNSButton.png; sourceTree = "<group>"; };
 		C8D712BA1A6EE206005BC2F9 /* blackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackButton.png; sourceTree = "<group>"; };
 		C8D712BB1A6EE206005BC2F9 /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
 		C8D712BC1A6EE206005BC2F9 /* normalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalButton.png; sourceTree = "<group>"; };
@@ -118,6 +125,8 @@
 				C83DDFC71A75706400C319FA /* preferenceWindow.h */,
 				C83DDFC91A75706400C319FA /* preferenceWindow.xib */,
 				C8BC03591A6AA6BA00D26560 /* AppDelegate.h */,
+				C8D36A541A913A44003CDD38 /* blackNSButton.h */,
+				C8D36A551A913A44003CDD38 /* blackNSButton.m */,
 				C8BC03B01A6ABB2100D26560 /* MainMenu.xib */,
 				C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */,
 				C8BC035E1A6AA6BA00D26560 /* Images.xcassets */,
@@ -164,6 +173,8 @@
 		C8BC03781A6AA73800D26560 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C8D36A571A913F29003CDD38 /* blackNSButton.png */,
+				C81BCE381A914386007714E9 /* blackNSButtonClicked.png */,
 				C84800AE1A70FD00001E6D25 /* bar.png */,
 				C84800B01A710261001E6D25 /* downArrow.png */,
 				C84800B11A710261001E6D25 /* upArrow.png */,
@@ -270,6 +281,7 @@
 				C84800AF1A70FD00001E6D25 /* bar.png in Resources */,
 				C83DDFD51A768DC700C319FA /* virtualKeyboard.xib in Resources */,
 				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
+				C81BCE391A914386007714E9 /* blackNSButtonClicked.png in Resources */,
 				C84800AD1A70F8BD001E6D25 /* topBar.png in Resources */,
 				C83DDFCB1A75706400C319FA /* preferenceWindow.xib in Resources */,
 				C84800B21A710261001E6D25 /* downArrow.png in Resources */,
@@ -279,6 +291,7 @@
 				C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */,
 				C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */,
 				C84800B31A710261001E6D25 /* upArrow.png in Resources */,
+				C8D36A581A913F29003CDD38 /* blackNSButton.png in Resources */,
 				C8D712C21A6EE206005BC2F9 /* redButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */,
+				C8D36A561A913A44003CDD38 /* blackNSButton.m in Sources */,
 				C8BC035D1A6AA6BA00D26560 /* main.m in Sources */,
 				C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */,
 				C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */,

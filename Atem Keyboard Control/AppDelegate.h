@@ -14,6 +14,7 @@
 #import "preferenceWindow.h"
 #import "virtualKeyboard.h"
 
+
 class MixEffectBlockMonitor;
 class SwitcherMonitor;
 class InputMonitor;

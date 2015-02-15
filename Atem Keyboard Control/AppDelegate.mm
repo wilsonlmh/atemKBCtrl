@@ -565,7 +565,7 @@ private:
 -(void)setupUI {
     textInput.stringValue = @"";
     textKB.hidden = true;
-    window.backgroundColor = [NSColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1];
+    window.backgroundColor = [NSColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1];
     logTextArea.textColor = [NSColor whiteColor];
     preBG.hidden = true;
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];

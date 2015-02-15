@@ -10,13 +10,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		sN+kqV21y7gY2wHB72LcHLdY4PM=
+		KU7IqxM8yb8/qf6QEP7/aCurw6E=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v5MaFkrkIj4cx9t90eqRB7DXr7c=
+			R1AG4LBYsqrWv8XrFL9z7OwdwCM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -27,23 +27,27 @@
 		</data>
 		<key>Resources/blackButton.png</key>
 		<data>
-		J8GDmrZpHt9+1XhflgH1MqDDF3Q=
+		Bu64g3/zhpn8l7rr2fOfp/JIWeQ=
+		</data>
+		<key>Resources/blackNSButton.png</key>
+		<data>
+		oJhI1t/KTkRQqk2z/7jtKftmlRQ=
 		</data>
 		<key>Resources/blueButton.png</key>
 		<data>
-		BFWKZFnUSFk6A1YcTPKnN3fcUss=
+		ESPgdrW2rl7p36J+MPGH0J6Zts8=
 		</data>
 		<key>Resources/downArrow.png</key>
 		<data>
-		zdBm4dX+TmwtvXeUm7QhCVtM2gA=
+		AE85RbbB9Pttt0F+6vyg6hzh78A=
 		</data>
 		<key>Resources/greenButton.png</key>
 		<data>
-		6LYzBM6eB3jsnS90Y6Z/gjflNNk=
+		wY9yd9tAXnKmfZjAnmJC9gsG/rI=
 		</data>
 		<key>Resources/normalButton.png</key>
 		<data>
-		7iJvwcl4M+W9tdUTH5QQJQQdmvs=
+		gsy0ia/3yBeahQxICw9mr9t7uPA=
 		</data>
 		<key>Resources/preferenceWindow.nib</key>
 		<data>
@@ -51,23 +55,23 @@
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>
-		AcJ6sc/B4ebdCOXrtE594K2dfiQ=
+		34iuJNOMbqREdcen2hpzDmzGrvo=
 		</data>
 		<key>Resources/topBar.png</key>
 		<data>
-		5jJsyNjKoiRxWqN0CZ6u11fAZwA=
+		cf34icy8i/OdS6YCzFxDJjJjrz8=
 		</data>
 		<key>Resources/upArrow.png</key>
 		<data>
-		ShwUPKBnOtFkXkVpseGbEpZk1HI=
+		/vuO4AYhgQnoEBhwSGy8XX0m3Aw=
 		</data>
 		<key>Resources/virtualKeyboard.nib</key>
 		<data>
-		rMB4aqn9C7HFGkVTNtyTC1xikUQ=
+		+vDQ2AUUA8HW0Cdi1391h+/tLP8=
 		</data>
 		<key>Resources/yellowButton.png</key>
 		<data>
-		tYJZr/PyPn6MGs+X+XAK4hBGhCs=
+		z4AMtvDIYATX6IH6VS0x3qBDVz4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -78,13 +82,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		sN+kqV21y7gY2wHB72LcHLdY4PM=
+		KU7IqxM8yb8/qf6QEP7/aCurw6E=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v5MaFkrkIj4cx9t90eqRB7DXr7c=
+			R1AG4LBYsqrWv8XrFL9z7OwdwCM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -95,23 +99,27 @@
 		</data>
 		<key>Resources/blackButton.png</key>
 		<data>
-		J8GDmrZpHt9+1XhflgH1MqDDF3Q=
+		Bu64g3/zhpn8l7rr2fOfp/JIWeQ=
+		</data>
+		<key>Resources/blackNSButton.png</key>
+		<data>
+		oJhI1t/KTkRQqk2z/7jtKftmlRQ=
 		</data>
 		<key>Resources/blueButton.png</key>
 		<data>
-		BFWKZFnUSFk6A1YcTPKnN3fcUss=
+		ESPgdrW2rl7p36J+MPGH0J6Zts8=
 		</data>
 		<key>Resources/downArrow.png</key>
 		<data>
-		zdBm4dX+TmwtvXeUm7QhCVtM2gA=
+		AE85RbbB9Pttt0F+6vyg6hzh78A=
 		</data>
 		<key>Resources/greenButton.png</key>
 		<data>
-		6LYzBM6eB3jsnS90Y6Z/gjflNNk=
+		wY9yd9tAXnKmfZjAnmJC9gsG/rI=
 		</data>
 		<key>Resources/normalButton.png</key>
 		<data>
-		7iJvwcl4M+W9tdUTH5QQJQQdmvs=
+		gsy0ia/3yBeahQxICw9mr9t7uPA=
 		</data>
 		<key>Resources/preferenceWindow.nib</key>
 		<data>
@@ -119,23 +127,23 @@
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>
-		AcJ6sc/B4ebdCOXrtE594K2dfiQ=
+		34iuJNOMbqREdcen2hpzDmzGrvo=
 		</data>
 		<key>Resources/topBar.png</key>
 		<data>
-		5jJsyNjKoiRxWqN0CZ6u11fAZwA=
+		cf34icy8i/OdS6YCzFxDJjJjrz8=
 		</data>
 		<key>Resources/upArrow.png</key>
 		<data>
-		ShwUPKBnOtFkXkVpseGbEpZk1HI=
+		/vuO4AYhgQnoEBhwSGy8XX0m3Aw=
 		</data>
 		<key>Resources/virtualKeyboard.nib</key>
 		<data>
-		rMB4aqn9C7HFGkVTNtyTC1xikUQ=
+		+vDQ2AUUA8HW0Cdi1391h+/tLP8=
 		</data>
 		<key>Resources/yellowButton.png</key>
 		<data>
-		tYJZr/PyPn6MGs+X+XAK4hBGhCs=
+		z4AMtvDIYATX6IH6VS0x3qBDVz4=
 		</data>
 	</dict>
 	<key>rules</key>

@@ -52,3 +52,19 @@
     mainMenuSender = sender;
 }
 @end
+
+
+@implementation blackNSButtonCell
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setBackgroundColor:[NSColor blackColor]]; //doesn't works
+    }
+    return self;
+}
+
+
+
+@end

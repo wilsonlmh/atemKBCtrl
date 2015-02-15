@@ -879,7 +879,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Program" id="bTP-7i-xcF">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -888,7 +888,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="COLOR" id="5aL-2e-9kH">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -963,7 +963,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Preview" id="tKk-4z-ufi">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -972,7 +972,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Transition" id="jsM-p8-18z">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -981,7 +981,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="COLOR" id="rti-NG-kbC">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1030,108 +1030,108 @@
                                     </connections>
                                 </button>
                                 <textField verticalHuggingPriority="750" id="h3T-1r-3c7" customClass="MappingText">
-                                    <rect key="frame" x="12" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="12" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="`" drawsBackground="YES" id="OyF-zg-Ryl">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="`" drawsBackground="YES" id="OyF-zg-Ryl">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="8mt-Jr-68w"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="qXe-pH-ysU" customClass="MappingText">
-                                    <rect key="frame" x="56" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="56" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1" drawsBackground="YES" id="hWY-FF-c6M">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="1" drawsBackground="YES" id="hWY-FF-c6M">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="TYj-r7-gvj"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="UWs-6s-4oU" customClass="MappingText">
-                                    <rect key="frame" x="100" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="100" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="2" drawsBackground="YES" id="oMX-vX-REF">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="2" drawsBackground="YES" id="oMX-vX-REF">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="thW-6I-nzo"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="8nq-CO-KKp" customClass="MappingText">
-                                    <rect key="frame" x="144" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="144" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="3" drawsBackground="YES" id="xPf-II-lU4">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="3" drawsBackground="YES" id="xPf-II-lU4">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="H8y-Zm-YC4"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="B9G-1H-svd" customClass="MappingText">
-                                    <rect key="frame" x="188" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="188" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="4" drawsBackground="YES" id="ooP-GX-Aae">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="4" drawsBackground="YES" id="ooP-GX-Aae">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="CIS-SR-R6A"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="J47-c3-qLd" customClass="MappingText">
-                                    <rect key="frame" x="232" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="232" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="5" drawsBackground="YES" id="jqI-M6-SMv">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="5" drawsBackground="YES" id="jqI-M6-SMv">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="rp1-mE-yIb"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="8Cl-MD-Yky" customClass="MappingText">
-                                    <rect key="frame" x="276" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="276" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="6" drawsBackground="YES" id="sDw-TZ-xGV">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="6" drawsBackground="YES" id="sDw-TZ-xGV">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="7dE-wF-Ygd"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="0Vb-qu-n7u" customClass="MappingText">
-                                    <rect key="frame" x="320" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="320" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="-" drawsBackground="YES" id="U15-WX-xse">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="-" drawsBackground="YES" id="U15-WX-xse">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="CXw-ac-rbb"/>
                                     </connections>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="PJo-hR-Dfg" customClass="MappingText">
-                                    <rect key="frame" x="364" y="299" width="40" height="18"/>
+                                    <rect key="frame" x="364" y="297" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="=" drawsBackground="YES" id="eRo-cI-Ene">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="=" drawsBackground="YES" id="eRo-cI-Ene">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="ZsO-Gb-k20"/>
@@ -1140,10 +1140,10 @@
                                 <textField verticalHuggingPriority="750" id="o0Y-Wn-ld3" customClass="MappingText">
                                     <rect key="frame" x="12" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="⇧" drawsBackground="YES" id="PEY-6T-H51">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="⇧" drawsBackground="YES" id="PEY-6T-H51">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="2Of-P1-o4W"/>
@@ -1152,10 +1152,10 @@
                                 <textField verticalHuggingPriority="750" id="bZ5-QU-vBZ" customClass="MappingText">
                                     <rect key="frame" x="56" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="z" drawsBackground="YES" id="IJX-pL-LB5">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="z" drawsBackground="YES" id="IJX-pL-LB5">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Sxt-XC-43K"/>
@@ -1164,10 +1164,10 @@
                                 <textField verticalHuggingPriority="750" id="oBL-Xh-x3D" customClass="MappingText">
                                     <rect key="frame" x="100" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="x" drawsBackground="YES" id="CMA-BL-9sJ">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="x" drawsBackground="YES" id="CMA-BL-9sJ">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="iEW-s4-lW8"/>
@@ -1176,10 +1176,10 @@
                                 <textField verticalHuggingPriority="750" id="CxU-0R-BN5" customClass="MappingText">
                                     <rect key="frame" x="144" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="c" drawsBackground="YES" id="7mN-AG-dVL">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="c" drawsBackground="YES" id="7mN-AG-dVL">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="BFy-kH-myM"/>
@@ -1188,10 +1188,10 @@
                                 <textField verticalHuggingPriority="750" id="Ztr-xP-IUL" customClass="MappingText">
                                     <rect key="frame" x="188" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="v" drawsBackground="YES" id="RL8-Jr-waP">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="v" drawsBackground="YES" id="RL8-Jr-waP">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="83O-Zs-MTj"/>
@@ -1200,10 +1200,10 @@
                                 <textField verticalHuggingPriority="750" id="h1B-DT-zcs" customClass="MappingText">
                                     <rect key="frame" x="232" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="b" drawsBackground="YES" id="tPi-ug-GmB">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="b" drawsBackground="YES" id="tPi-ug-GmB">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="hMT-RB-3Eu"/>
@@ -1212,10 +1212,10 @@
                                 <textField verticalHuggingPriority="750" id="SEV-rU-yO5" customClass="MappingText">
                                     <rect key="frame" x="276" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="n" drawsBackground="YES" id="ZzI-16-B7z">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="n" drawsBackground="YES" id="ZzI-16-B7z">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="bjG-jG-hTw"/>
@@ -1224,10 +1224,10 @@
                                 <textField verticalHuggingPriority="750" id="2UT-oz-nMc" customClass="MappingText">
                                     <rect key="frame" x="320" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="[" drawsBackground="YES" id="edd-AK-agO">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="[" drawsBackground="YES" id="edd-AK-agO">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="wXS-0v-qyt"/>
@@ -1236,10 +1236,10 @@
                                 <textField verticalHuggingPriority="750" id="Gr6-bs-2vL" customClass="MappingText">
                                     <rect key="frame" x="364" y="222" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="]" drawsBackground="YES" id="hnS-hT-cXY">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="]" drawsBackground="YES" id="hnS-hT-cXY">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="UXq-cQ-2dU"/>
@@ -1259,10 +1259,10 @@
                                 <textField verticalHuggingPriority="750" id="0H4-Us-dgt" customClass="MappingText">
                                     <rect key="frame" x="10" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="⌘" drawsBackground="YES" id="lJ1-Hr-lls">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="⌘" drawsBackground="YES" id="lJ1-Hr-lls">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="xx9-OP-Wua"/>
@@ -1282,10 +1282,10 @@
                                 <textField verticalHuggingPriority="750" id="Yx2-zd-RVG" customClass="MappingText">
                                     <rect key="frame" x="10" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="Hsg-f0-thX">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="a" drawsBackground="YES" id="Hsg-f0-thX">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="XWW-Gm-peF"/>
@@ -1305,10 +1305,10 @@
                                 <textField verticalHuggingPriority="750" id="JP8-bw-y1j" customClass="MappingText">
                                     <rect key="frame" x="54" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="UZX-rJ-wjW">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="s" drawsBackground="YES" id="UZX-rJ-wjW">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="hrR-vh-dLH"/>
@@ -1325,25 +1325,13 @@
                                         <action selector="clickedUIMappingButton:" target="Voe-Tx-rLC" id="CLz-wD-Umt"/>
                                     </connections>
                                 </button>
-                                <textField verticalHuggingPriority="750" id="T2t-1I-NJX" customClass="MappingText">
-                                    <rect key="frame" x="98" y="31" width="40" height="18"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="Vw6-cF-tCr">
-                                        <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="nIe-OS-8Dj"/>
-                                    </connections>
-                                </textField>
                                 <textField verticalHuggingPriority="750" id="DBe-jH-ICg">
                                     <rect key="frame" x="164" y="31" width="41" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="DSK1" drawsBackground="YES" id="cyd-7O-UvC">
-                                        <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="1:00" placeholderString="DSK1" drawsBackground="YES" id="cyd-7O-UvC">
+                                        <font key="font" metaFont="systemBold" size="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedDuration:" target="Voe-Tx-rLC" id="JdM-Yd-jms"/>
@@ -1352,10 +1340,10 @@
                                 <textField verticalHuggingPriority="750" id="hRO-pd-30a">
                                     <rect key="frame" x="232" y="31" width="41" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="DSK2" drawsBackground="YES" id="MMY-f0-Exr">
-                                        <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="1:00" placeholderString="DSK2" drawsBackground="YES" id="MMY-f0-Exr">
+                                        <font key="font" metaFont="systemBold" size="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedDuration:" target="Voe-Tx-rLC" id="Tkd-m8-zXm"/>
@@ -1375,10 +1363,10 @@
                                 <textField verticalHuggingPriority="750" id="mVd-KA-6sF" customClass="MappingText">
                                     <rect key="frame" x="301" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="vmk-rj-Emk">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="l" drawsBackground="YES" id="vmk-rj-Emk">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Yej-d0-HWz"/>
@@ -1398,10 +1386,10 @@
                                 <textField verticalHuggingPriority="750" id="UTq-wI-ER5" customClass="MappingText">
                                     <rect key="frame" x="345" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="xT4-kp-AhL">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title=";" drawsBackground="YES" id="xT4-kp-AhL">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Kcv-Wq-M5L"/>
@@ -1410,10 +1398,10 @@
                                 <textField verticalHuggingPriority="750" id="G6G-GM-5vE" customClass="MappingText">
                                     <rect key="frame" x="389" y="31" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="oph-Z3-OxX">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="'" drawsBackground="YES" id="oph-Z3-OxX">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="0mp-vb-Ha8"/>
@@ -1433,10 +1421,10 @@
                                 <textField verticalHuggingPriority="750" id="e9c-tz-5yC" customClass="MappingText">
                                     <rect key="frame" x="257" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="m" drawsBackground="YES" id="KPz-Wk-mwd">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="m" drawsBackground="YES" id="KPz-Wk-mwd">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="XQE-uj-yzG"/>
@@ -1445,10 +1433,10 @@
                                 <textField verticalHuggingPriority="750" id="MbJ-p3-iJJ">
                                     <rect key="frame" x="200" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANS" drawsBackground="YES" id="F1m-15-ojx">
-                                        <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="center" title="1:00" placeholderString="TRANS" drawsBackground="YES" id="F1m-15-ojx">
+                                        <font key="font" metaFont="systemBold" size="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedDuration:" target="Voe-Tx-rLC" id="Ln3-cl-hga"/>
@@ -1468,10 +1456,10 @@
                                 <textField verticalHuggingPriority="750" id="Dnf-Rw-Yy0" customClass="MappingText">
                                     <rect key="frame" x="300" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="," drawsBackground="YES" id="DSo-fg-30o">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="," drawsBackground="YES" id="DSo-fg-30o">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="PWs-sK-CBo"/>
@@ -1491,10 +1479,10 @@
                                 <textField verticalHuggingPriority="750" id="05L-qP-qXt" customClass="MappingText">
                                     <rect key="frame" x="345" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="." drawsBackground="YES" id="G5O-YB-DBK">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="." drawsBackground="YES" id="G5O-YB-DBK">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="E2s-KV-byf"/>
@@ -1514,10 +1502,10 @@
                                 <textField verticalHuggingPriority="750" id="A5C-TZ-9RS" customClass="MappingText">
                                     <rect key="frame" x="388" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="/" drawsBackground="YES" id="5p1-nu-S9t">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="/" drawsBackground="YES" id="5p1-nu-S9t">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="dJ9-qJ-1VZ"/>
@@ -1526,37 +1514,37 @@
                                 <textField verticalHuggingPriority="750" id="bcY-zM-3EN">
                                     <rect key="frame" x="257" y="119" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSMix" drawsBackground="YES" id="ZnN-sw-dOV">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="1:00" placeholderString="TRANSMix" drawsBackground="YES" id="ZnN-sw-dOV">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="p6u-Wf-mPu">
                                     <rect key="frame" x="300" y="119" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSDip" drawsBackground="YES" id="JcT-Kf-QfY">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="1:00" placeholderString="TRANSDip" drawsBackground="YES" id="JcT-Kf-QfY">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="5nJ-FA-Wek">
                                     <rect key="frame" x="345" y="119" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSWipe" drawsBackground="YES" id="bm7-kx-y9T">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="1:00" placeholderString="TRANSWipe" drawsBackground="YES" id="bm7-kx-y9T">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="3s9-cZ-4VK">
                                     <rect key="frame" x="388" y="119" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="1:00" placeholderString="TRANSDve" drawsBackground="YES" id="723-Ql-5Ov">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="1:00" placeholderString="TRANSDve" drawsBackground="YES" id="723-Ql-5Ov">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedDuration:" target="Voe-Tx-rLC" id="lWa-nQ-Z60"/>
@@ -1576,10 +1564,10 @@
                                 <textField verticalHuggingPriority="750" id="Zp2-mP-J7f" customClass="MappingText">
                                     <rect key="frame" x="145" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="BKSP" drawsBackground="YES" id="cdj-ZW-wk3">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="BKSP" drawsBackground="YES" id="cdj-ZW-wk3">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="YjN-F8-VVa"/>
@@ -1599,10 +1587,10 @@
                                 <textField verticalHuggingPriority="750" id="nnU-AK-qgw" customClass="MappingText">
                                     <rect key="frame" x="101" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="↩" drawsBackground="YES" id="lSc-eZ-khP">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="↩" drawsBackground="YES" id="lSc-eZ-khP">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="Bdl-6d-CTk"/>
@@ -1624,7 +1612,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Downstream Key" id="y6R-dR-zxZ">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1633,7 +1621,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Key 1" id="Y7O-5f-vfn">
                                         <font key="font" metaFont="system" size="15"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1642,7 +1630,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Key 2" id="XS5-cO-Smq">
                                         <font key="font" metaFont="system" size="15"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1651,7 +1639,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Rate" id="kXs-Xg-Dc0">
                                         <font key="font" metaFont="system" size="15"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1685,10 +1673,10 @@
                                 <textField verticalHuggingPriority="750" id="JFR-kp-5gl" customClass="MappingText">
                                     <rect key="frame" x="57" y="139" width="40" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" title="Space" drawsBackground="YES" id="7T2-6M-kQJ">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="Space" drawsBackground="YES" id="7T2-6M-kQJ">
                                         <font key="font" metaFont="system" size="10"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                     <connections>
                                         <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="kVi-VV-IUW"/>
@@ -1826,6 +1814,18 @@
                                         <action selector="clickedDownArraow:" target="Voe-Tx-rLC" id="gmq-c8-ihA"/>
                                     </connections>
                                 </button>
+                                <textField verticalHuggingPriority="750" id="T2t-1I-NJX" customClass="MappingText">
+                                    <rect key="frame" x="98" y="31" width="40" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" alignment="center" title="d" drawsBackground="YES" id="Vw6-cF-tCr">
+                                        <font key="font" metaFont="system" size="10"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <action selector="changedTextKeys:" target="Voe-Tx-rLC" id="nIe-OS-8Dj"/>
+                                    </connections>
+                                </textField>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -1836,7 +1836,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mapping" id="tsr-z0-2IE">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1845,7 +1845,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connection" id="y3N-EI-igP">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1881,19 +1881,19 @@
                                 <textField verticalHuggingPriority="750" id="IJz-Pk-ebr">
                                     <rect key="frame" x="55" y="72" width="259" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="192.168.2.250" placeholderString="IP of the ATEM" drawsBackground="YES" id="HVf-dd-i2p">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" title="192.168.2.250" placeholderString="IP of the ATEM" drawsBackground="YES" id="HVf-dd-i2p">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="W43-Wf-gGz">
                                     <rect key="frame" x="55" y="42" width="282" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="nkS-fB-Lje">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="nkS-fB-Lje">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZHn-mQ-eII">
@@ -1901,7 +1901,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IP:" id="mvg-IX-cRN">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
@@ -1910,14 +1910,14 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name:" id="rnR-fv-mti">
                                         <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <button verticalHuggingPriority="750" id="m4d-GU-FMN">
-                                    <rect key="frame" x="193" y="7" width="151" height="32"/>
+                                <button verticalHuggingPriority="750" id="m4d-GU-FMN" customClass="blackNSButtonYellowText">
+                                    <rect key="frame" x="193" y="7" width="151" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <buttonCell key="cell" type="push" title="Connect/Change IP" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j7f-YH-8lP">
+                                    <buttonCell key="cell" type="square" title="Connect/Change IP" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="j7f-YH-8lP">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -1944,14 +1944,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Live Input" id="nck-iw-e71">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" red="1" green="0.77647066119999997" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="VcK-CC-NxB">
-                        <rect key="frame" x="218" y="8" width="140" height="32"/>
+                    <button verticalHuggingPriority="750" id="VcK-CC-NxB" customClass="blackNSButtonYellowText">
+                        <rect key="frame" x="225" y="13" width="126" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Press to Action!" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b6w-DD-kz5">
+                        <buttonCell key="cell" type="square" title="Press to Action!" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b6w-DD-kz5">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -1959,10 +1959,10 @@
                             <action selector="clickedUIToggleAction:" target="Voe-Tx-rLC" id="GPf-QX-M57"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" id="O59-0v-wxR">
-                        <rect key="frame" x="101" y="8" width="128" height="32"/>
+                    <button verticalHuggingPriority="750" id="O59-0v-wxR" customClass="blackNSButtonYellowText">
+                        <rect key="frame" x="101" y="13" width="121" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Reverse Slider" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0yM-KM-cZ9">
+                        <buttonCell key="cell" type="square" title="Reverse Slider" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0yM-KM-cZ9">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -2012,25 +2012,25 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
                     <imageView canDrawConcurrently="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="wco-Ny-C8T">
-                        <rect key="frame" x="0.0" y="430" width="800" height="100"/>
+                        <rect key="frame" x="0.0" y="410" width="800" height="120"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" refusesFirstResponder="YES" alignment="left" animates="YES" imageAlignment="topLeft" image="topBar" id="khT-9M-pXi"/>
                     </imageView>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9m-Ut-Gx9">
+                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="J9m-Ut-Gx9">
                         <rect key="frame" x="0.0" y="411" width="800" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bar" id="dlq-Fk-MOh"/>
                     </imageView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="317.5" y="267"/>
+            <point key="canvasLocation" x="317" y="267"/>
         </window>
     </objects>
     <resources>
         <image name="bar" width="800" height="11"/>
         <image name="blackButton" width="40" height="40"/>
         <image name="downArrow" width="21.600000381469727" height="21.600000381469727"/>
-        <image name="topBar" width="800" height="100"/>
+        <image name="topBar" width="800" height="120"/>
         <image name="upArrow" width="21.600000381469727" height="21.600000381469727"/>
     </resources>
 </document>
