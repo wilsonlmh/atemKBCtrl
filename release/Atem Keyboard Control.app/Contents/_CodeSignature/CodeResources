@@ -10,13 +10,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		OHhecaapPG3pP/guSHmykKEKWvE=
+		em02hrTjcbojftTbOd/rTf8SFv8=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R1AG4LBYsqrWv8XrFL9z7OwdwCM=
+			N0g1WxPhtXUzYSmJRPLp0vOV5fU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -55,11 +55,19 @@
 		</data>
 		<key>Resources/preferenceWindow.nib</key>
 		<data>
-		i7f5NoihhLbi36GHY9dIP+HfyFY=
+		+qN0D3QWCOp9iJAgGfJD9JYb+s4=
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>
 		34iuJNOMbqREdcen2hpzDmzGrvo=
+		</data>
+		<key>Resources/sliderFill.png</key>
+		<data>
+		CpaF3Rte2xeqhh8w+hqewsqjz+E=
+		</data>
+		<key>Resources/tBar.png</key>
+		<data>
+		tYkejW9foEp9HErJpkZwPpFDEQc=
 		</data>
 		<key>Resources/topBar.png</key>
 		<data>
@@ -86,13 +94,13 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		OHhecaapPG3pP/guSHmykKEKWvE=
+		em02hrTjcbojftTbOd/rTf8SFv8=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			R1AG4LBYsqrWv8XrFL9z7OwdwCM=
+			N0g1WxPhtXUzYSmJRPLp0vOV5fU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -131,11 +139,19 @@
 		</data>
 		<key>Resources/preferenceWindow.nib</key>
 		<data>
-		i7f5NoihhLbi36GHY9dIP+HfyFY=
+		+qN0D3QWCOp9iJAgGfJD9JYb+s4=
 		</data>
 		<key>Resources/redButton.png</key>
 		<data>
 		34iuJNOMbqREdcen2hpzDmzGrvo=
+		</data>
+		<key>Resources/sliderFill.png</key>
+		<data>
+		CpaF3Rte2xeqhh8w+hqewsqjz+E=
+		</data>
+		<key>Resources/tBar.png</key>
+		<data>
+		tYkejW9foEp9HErJpkZwPpFDEQc=
 		</data>
 		<key>Resources/topBar.png</key>
 		<data>

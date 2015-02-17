@@ -59,12 +59,26 @@
     
 }
 
+- (IBAction)changedSwitchKeyboardMonitorMode:(NSMatrix*)sender {
+    if ([[[sender selectedCell] title]  isEqual: @"Local Only"]) {
+        preferenceConfig.keyboardMonitorMode = 0;
+    } else if ([[[sender selectedCell] title]  isEqual: @"Global Only"]) {
+        preferenceConfig.keyboardMonitorMode = 1;
+    } else if ([[[sender selectedCell] title]  isEqual: @"Both"]) {
+        preferenceConfig.keyboardMonitorMode = 2;
+    }
+    
+}
+
 - (void)refreshConfig:(NSMutableArray*)channels label:(NSMutableArray*)label config:(struct config)currentConfig isConnected:(BOOL)isConnected {
     isMixerConnected = isConnected;
     isClickedApplyButton = false;
     preferenceConfig = currentConfig;
     [sliderSlidingRate setDoubleValue:(double)preferenceConfig.slidingRate];
     textSlidingRate.stringValue = [NSString stringWithFormat:@"%d",preferenceConfig.slidingRate];
+    
+    [switchKeyboardMonitorMode selectCellWithTag:preferenceConfig.keyboardMonitorMode];
+    
     if (isMixerConnected) {
         popupBlack.enabled = true;
         popupCh1.enabled = true;

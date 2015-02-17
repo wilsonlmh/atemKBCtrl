@@ -16,6 +16,10 @@
 		C84800AF1A70FD00001E6D25 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800AE1A70FD00001E6D25 /* bar.png */; };
 		C84800B21A710261001E6D25 /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B01A710261001E6D25 /* downArrow.png */; };
 		C84800B31A710261001E6D25 /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C84800B11A710261001E6D25 /* upArrow.png */; };
+		C88D66491A925C3D00A516EA /* tBar.png in Resources */ = {isa = PBXBuildFile; fileRef = C88D66481A925C3D00A516EA /* tBar.png */; };
+		C88D664E1A925D5C00A516EA /* LADSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C88D664B1A925D5C00A516EA /* LADSlider.m */; };
+		C88D664F1A925D5C00A516EA /* LADSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C88D664D1A925D5C00A516EA /* LADSliderCell.m */; };
+		C88D66511A92610200A516EA /* sliderFill.png in Resources */ = {isa = PBXBuildFile; fileRef = C88D66501A92610200A516EA /* sliderFill.png */; };
 		C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B825B61A6FBA57003E32A2 /* blueButton.png */; };
 		C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035A1A6AA6BA00D26560 /* AppDelegate.mm */; };
 		C8BC035D1A6AA6BA00D26560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC035C1A6AA6BA00D26560 /* main.m */; };
@@ -54,6 +58,12 @@
 		C84800AE1A70FD00001E6D25 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		C84800B01A710261001E6D25 /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
 		C84800B11A710261001E6D25 /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
+		C88D66481A925C3D00A516EA /* tBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tBar.png; sourceTree = "<group>"; };
+		C88D664A1A925D5C00A516EA /* LADSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADSlider.h; sourceTree = "<group>"; };
+		C88D664B1A925D5C00A516EA /* LADSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADSlider.m; sourceTree = "<group>"; };
+		C88D664C1A925D5C00A516EA /* LADSliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADSliderCell.h; sourceTree = "<group>"; };
+		C88D664D1A925D5C00A516EA /* LADSliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LADSliderCell.m; sourceTree = "<group>"; };
+		C88D66501A92610200A516EA /* sliderFill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderFill.png; sourceTree = "<group>"; };
 		C8B825B61A6FBA57003E32A2 /* blueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueButton.png; path = images/blueButton.png; sourceTree = "<group>"; };
 		C8BC03541A6AA6BA00D26560 /* Atem Keyboard Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atem Keyboard Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BC03581A6AA6BA00D26560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +128,10 @@
 		C8BC03561A6AA6BA00D26560 /* Atem Keyboard Control */ = {
 			isa = PBXGroup;
 			children = (
+				C88D664A1A925D5C00A516EA /* LADSlider.h */,
+				C88D664B1A925D5C00A516EA /* LADSlider.m */,
+				C88D664C1A925D5C00A516EA /* LADSliderCell.h */,
+				C88D664D1A925D5C00A516EA /* LADSliderCell.m */,
 				C83DDFD11A768DC700C319FA /* virtualKeyboard.h */,
 				C83DDFD21A768DC700C319FA /* virtualKeyboard.m */,
 				C83DDFD31A768DC700C319FA /* virtualKeyboard.xib */,
@@ -176,8 +190,10 @@
 				C8D36A571A913F29003CDD38 /* blackNSButton.png */,
 				C81BCE381A914386007714E9 /* blackNSButtonClicked.png */,
 				C84800AE1A70FD00001E6D25 /* bar.png */,
+				C88D66501A92610200A516EA /* sliderFill.png */,
 				C84800B01A710261001E6D25 /* downArrow.png */,
 				C84800B11A710261001E6D25 /* upArrow.png */,
+				C88D66481A925C3D00A516EA /* tBar.png */,
 				C84800AC1A70F8BD001E6D25 /* topBar.png */,
 				C8D712BA1A6EE206005BC2F9 /* blackButton.png */,
 				C8D712BB1A6EE206005BC2F9 /* greenButton.png */,
@@ -278,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8BC035F1A6AA6BA00D26560 /* Images.xcassets in Resources */,
+				C88D66511A92610200A516EA /* sliderFill.png in Resources */,
 				C84800AF1A70FD00001E6D25 /* bar.png in Resources */,
 				C83DDFD51A768DC700C319FA /* virtualKeyboard.xib in Resources */,
 				C8D712C11A6EE206005BC2F9 /* normalButton.png in Resources */,
@@ -289,6 +306,7 @@
 				C8D712C31A6EE206005BC2F9 /* yellowButton.png in Resources */,
 				C8BC03B21A6ABB2100D26560 /* MainMenu.xib in Resources */,
 				C8B825B71A6FBA57003E32A2 /* blueButton.png in Resources */,
+				C88D66491A925C3D00A516EA /* tBar.png in Resources */,
 				C8D712C01A6EE206005BC2F9 /* greenButton.png in Resources */,
 				C84800B31A710261001E6D25 /* upArrow.png in Resources */,
 				C8D36A581A913F29003CDD38 /* blackNSButton.png in Resources */,
@@ -313,8 +331,10 @@
 				C83DDFCA1A75706400C319FA /* preferenceWindow.m in Sources */,
 				C8D36A561A913A44003CDD38 /* blackNSButton.m in Sources */,
 				C8BC035D1A6AA6BA00D26560 /* main.m in Sources */,
+				C88D664E1A925D5C00A516EA /* LADSlider.m in Sources */,
 				C8BC035B1A6AA6BA00D26560 /* AppDelegate.mm in Sources */,
 				C8BC03B91A6BEC0600D26560 /* BMDSwitcherAPIDispatch.cpp in Sources */,
+				C88D664F1A925D5C00A516EA /* LADSliderCell.m in Sources */,
 				C83DDFD41A768DC700C319FA /* virtualKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

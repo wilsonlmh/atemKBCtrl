@@ -13,6 +13,7 @@
 #import <libkern/OSAtomic.h>
 #import "preferenceWindow.h"
 #import "virtualKeyboard.h"
+#import "LADSlider.h"
 
 
 class MixEffectBlockMonitor;
@@ -74,7 +75,7 @@ class DSKMonitor;
     IBOutlet NSButton*	buttonDSK2On;
     IBOutlet NSButton*	buttonDSK2Auto;
     
-    IBOutlet NSSlider*	sliderTRANS;
+    IBOutlet LADSlider*	sliderTRANS;
     
     IBOutlet NSTextField*	textPGMBlack;
     IBOutlet NSTextField*	textPGMCh1;
@@ -235,7 +236,7 @@ class DSKMonitor;
 -(int)kbShortNameSearch:(NSMutableArray*)arrayToSearch obj:(NSString*)obj;
 -(void)triggerKB:(int)keyCode isDown:(bool)isDown;
 -(void)executeCmd:(NSString*)shortName;
--(void)toggleKeyListening:(int)type;
+-(void)toggleKeyListening;
 -(void)windowLostFocus;
 -(void)preferenceWindowClickedApplyButton;
 -(void)saveNSUserDefaults;

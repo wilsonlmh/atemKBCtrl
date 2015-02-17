@@ -437,6 +437,9 @@ private:
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"slidingRate"]) {
         currentConfig.slidingRate = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"slidingRate"];
     }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"keyboardMonitorMode"]) {
+        currentConfig.keyboardMonitorMode = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"keyboardMonitorMode"];
+    }
 }
 
 -(void)setupValues {
@@ -444,7 +447,7 @@ private:
     kbShortName = makeEmptyNSStringNSArray(150);
     cmdKBMapping = makeEmptyNSStringNSArray(150);
     mixerCurrentStatus = {false,@"",@"",0,0,0,0,false,0,0,0,0,0,0,@"",@"",false,false,0,0,false,false,0,0};
-    currentConfig = {0,1,2,3,4,5,6,2001,2002,300};
+    currentConfig = {0,1,2,3,4,5,6,2001,2002,300,0};
     PreferenceWindow = [[preferenceWindow alloc] initWithWindowNibName:@"preferenceWindow"];
     VirtualKeyboard = [[virtualKeyboard alloc] initWithWindowNibName:@"virtualKeyboard"];
     
@@ -568,6 +571,7 @@ private:
     window.backgroundColor = [NSColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1];
     logTextArea.textColor = [NSColor whiteColor];
     preBG.hidden = true;
+    sliderTRANS.knobImage = [NSImage imageNamed:@"tBar"];
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
 }
 
@@ -914,7 +918,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     }
 }
 
--(void)toggleKeyListening:(int)type {
+-(void)toggleKeyListening {
     if (kbLocalDownHandle) {
         [NSEvent removeMonitor:kbLocalDownHandle];
         kbLocalDownHandle = nil;
@@ -941,64 +945,66 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     }
     
     if ((mixerCurrentStatus.Connected) && (isKBControlling)) {
-        kbLocalDownHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
-            textKB.stringValue = @"";
-            [self triggerKB:(int)event.keyCode isDown:true];
-            return event;
-        }];
-        kbLocalUpHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyUpMask handler:^NSEvent *(NSEvent *event) {
-            textKB.stringValue = @"";
-            [self triggerKB:(int)event.keyCode isDown:false];
-            return event;
-        }];
-        kbLocalFlagsHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^NSEvent *(NSEvent *event) {
-            textKB.stringValue = @"";
-            bool localIsDown = false;
-            switch ((int)event.keyCode) {
-                case 55:
-                case 54:
-                    if (event.modifierFlags & NSCommandKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-                    
-                case 62:
-                case 59:
-                    if (event.modifierFlags & NSControlKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-                    
-                case 61:
-                case 58:
-                    if (event.modifierFlags & NSAlternateKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-                    
-                case 60:
-                case 56:
-                    if (event.modifierFlags & NSShiftKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-                    
-                case 63:
-                    if (event.modifierFlags & NSFunctionKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-                    
-                case 57:
-                    if (event.modifierFlags & NSAlphaShiftKeyMask) {
-                        localIsDown = 1;
-                    }
-                    break;
-            }
-            [self triggerKB:(int)event.keyCode isDown:localIsDown];
-            return event;
-        }];
-        if (type == 1) {
+        if ((currentConfig.keyboardMonitorMode == 0) || (currentConfig.keyboardMonitorMode == 2)) {
+            kbLocalDownHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
+                textKB.stringValue = @"";
+                [self triggerKB:(int)event.keyCode isDown:true];
+                return event;
+            }];
+            kbLocalUpHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyUpMask handler:^NSEvent *(NSEvent *event) {
+                textKB.stringValue = @"";
+                [self triggerKB:(int)event.keyCode isDown:false];
+                return event;
+            }];
+            kbLocalFlagsHandle = [NSEvent addLocalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^NSEvent *(NSEvent *event) {
+                textKB.stringValue = @"";
+                bool localIsDown = false;
+                switch ((int)event.keyCode) {
+                    case 55:
+                    case 54:
+                        if (event.modifierFlags & NSCommandKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                        
+                    case 62:
+                    case 59:
+                        if (event.modifierFlags & NSControlKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                        
+                    case 61:
+                    case 58:
+                        if (event.modifierFlags & NSAlternateKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                        
+                    case 60:
+                    case 56:
+                        if (event.modifierFlags & NSShiftKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                        
+                    case 63:
+                        if (event.modifierFlags & NSFunctionKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                        
+                    case 57:
+                        if (event.modifierFlags & NSAlphaShiftKeyMask) {
+                            localIsDown = 1;
+                        }
+                        break;
+                }
+                [self triggerKB:(int)event.keyCode isDown:localIsDown];
+                return event;
+            }];
+        }
+        if (currentConfig.keyboardMonitorMode > 0) {
             kbGlobalDownHandle = [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {
                 textKB.stringValue = @"";
                 [self triggerKB:(int)event.keyCode isDown:true];
@@ -1174,14 +1180,14 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         isKBControlling = !isKBControlling;
         [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
         [self performSelectorOnMainThread:@selector(toggleUIConnectionAllTextField) withObject:nil waitUntilDone:YES];
-        [self toggleKeyListening:0];
+        [self toggleKeyListening];
         sender.title = @"Push to Action!";
     } else {
         isKBControlling = !isKBControlling;
         [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
         [self performSelectorOnMainThread:@selector(toggleUIConnectionAllTextField) withObject:nil waitUntilDone:YES];
         [self updateKBMappings];
-        [self toggleKeyListening:0];
+        [self toggleKeyListening];
         [textKB becomeFirstResponder];
         sender.title = @"In-Action!";
     }
@@ -1190,7 +1196,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 
 - (IBAction)clickedReverseSlider:(id)sernder {
     isReverseSlider = !isReverseSlider;
-    [self performSelectorOnMainThread:@selector(updateUIbetweenMixer) withObject:nil waitUntilDone:YES];
+    sliderTRANS.doubleValue = 1-sliderTRANS.doubleValue;
 }
 
 - (IBAction)clickedChangeIP:(id)sender {
@@ -1775,7 +1781,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
 -(void)updateUIbetweenMixer {
     [self performSelectorOnMainThread:@selector(toggleUIConnectionAllTextField) withObject:nil waitUntilDone:YES];
     [self performSelectorOnMainThread:@selector(toggleAllMappingKBNameTextField) withObject:nil waitUntilDone:YES];
-    [self toggleKeyListening:0];
+    [self toggleKeyListening];
     textName.stringValue = mixerCurrentStatus.Name;
     if (mixerCurrentStatus.Connected) {
         textStatusColor.backgroundColor = [NSColor clearColor];
@@ -1941,7 +1947,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
             if (selectedCase !=nil) selectedCase2();
         }
         
-        bool TRANSReturn = false;
+        //bool TRANSReturn = false;
         
         //TRANSSlider
         /*if ((sliderTRANS.doubleValue != 0)  && (sliderTRANS.doubleValue != 1)) {
@@ -2061,9 +2067,12 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
         currentConfig = PreferenceWindow->preferenceConfig;
     }
     
+    //override even not connected
     currentConfig.slidingRate = PreferenceWindow->preferenceConfig.slidingRate;
+    currentConfig.keyboardMonitorMode = PreferenceWindow->preferenceConfig.keyboardMonitorMode;
     
     [self saveNSUserDefaults];
+    [self toggleKeyListening];
 }
 
 -(void)saveNSUserDefaults {
@@ -2078,6 +2087,7 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.ColorA forKey:@"ColorA"];
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.ColorB forKey:@"ColorB"];
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.slidingRate forKey:@"slidingRate"];
+    [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.keyboardMonitorMode forKey:@"keyboardMonitorMode"];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {

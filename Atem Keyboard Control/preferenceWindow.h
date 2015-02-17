@@ -23,7 +23,9 @@
         int64_t ColorA;
         int64_t ColorB;
         int slidingRate; //as pixel per stage
-        //{0,1,2,3,4,5,6,2001,2002,300}
+        int keyboardMonitorMode; //0:local, 1:global, 2:both
+        //{0,1,2,3,4,5,6,2001,2002,300,0}
+
     }preferenceConfig;
     
     IBOutlet NSPopUpButton*     popupBlack;
@@ -37,6 +39,7 @@
     IBOutlet NSPopUpButton*     popupColorB;
     IBOutlet NSTextField*       textSlidingRate;
     IBOutlet NSSlider*          sliderSlidingRate;
+    IBOutlet NSMatrix*          switchKeyboardMonitorMode;
     
 }
 
@@ -44,6 +47,7 @@
 - (IBAction)clickedApplyButton:(id)sender;
 - (IBAction)changedSliderSlidingRate:(id)sender;
 - (IBAction)changedTextSlidingRate:(id)sender;
+- (IBAction)changedSwitchKeyboardMonitorMode:(NSMatrix*)sender;
 
 - (void)refreshConfig:(NSMutableArray*)channels label:(NSMutableArray*)label config:(struct config)currentConfig isConnected:(BOOL)isConnected; //To read config or obtain mapping from mixer
 - (void)windowWillClose:(NSNotification *)notification;
