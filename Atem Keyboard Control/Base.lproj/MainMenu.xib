@@ -46,6 +46,7 @@
                 <outlet property="buttonTRANSMix" destination="aqP-ba-Dlk" id="WEE-v0-zZE"/>
                 <outlet property="buttonTRANSPreview" destination="qzw-aQ-gBK" id="kQd-ng-IfR"/>
                 <outlet property="buttonTRANSWipe" destination="1fa-ER-TTe" id="S2C-Zp-BIC"/>
+                <outlet property="menuMainWindowAlwaysOnTop" destination="jiJ-Y5-nST" id="kuZ-g1-Hlo"/>
                 <outlet property="preBG" destination="Zkb-od-M9z" id="8Io-12-Tw4"/>
                 <outlet property="sliderTRANS" destination="eoe-1g-eSO" id="6M4-2Y-SAc"/>
                 <outlet property="textDSK1Auto" destination="T2t-1I-NJX" id="dw2-JG-a98"/>
@@ -714,6 +715,25 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
                         <items>
+                            <menuItem title="Main Window" id="By5-2L-9F6">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Main Window" id="q7A-1O-ZUe">
+                                    <items>
+                                        <menuItem title="Always On Top" state="on" id="jiJ-Y5-nST">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="clickedMenuMainWindowAlwaysOnTop:" target="Voe-Tx-rLC" id="YoY-KK-4TC"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Move to center of main monitor" id="GjQ-cm-VLt">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="clickedMenuMoveToCenterOfMainMonitor:" target="Voe-Tx-rLC" id="zjl-ba-8Kc"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
                                 <connections>
                                     <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>

@@ -71,6 +71,7 @@
 }
 
 - (void)refreshConfig:(NSMutableArray*)channels label:(NSMutableArray*)label config:(struct config)currentConfig isConnected:(BOOL)isConnected {
+    [[self window]setLevel:NSFloatingWindowLevel];
     isMixerConnected = isConnected;
     isClickedApplyButton = false;
     preferenceConfig = currentConfig;

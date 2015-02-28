@@ -117,6 +117,8 @@ class DSKMonitor;
     IBOutlet NSTextField*	textDSK2On;
     IBOutlet NSTextField*	textDSK2Auto;
     
+    //App Menu
+    IBOutlet NSMenuItem*       menuMainWindowAlwaysOnTop;
     
     
     //App-level var
@@ -167,6 +169,11 @@ class DSKMonitor;
     
     config currentConfig;
     
+    struct userState {
+        bool mainWindowAlwaysOnTop;
+        NSRect mainWindowFrame;
+    }userState;
+    
     struct mixerCurrentStatus {
         bool Connected;
         __unsafe_unretained NSString* IP;
@@ -215,6 +222,9 @@ class DSKMonitor;
 -(IBAction)clickedBGButton:(id)sender;
 -(IBAction)focusedMappingText:(NSTextField*)sender;
 -(IBAction)changedTextKeys:(id)sender;
+-(IBAction)clickedMenuMainWindowAlwaysOnTop:(NSMenuItem*)sender;
+-(IBAction)clickedMenuMoveToCenterOfMainMonitor:(NSMenuItem*)sender;
+
 
 //ATEM Methods
 -(void)updateUIbetweenMixer;

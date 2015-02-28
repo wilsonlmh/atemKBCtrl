@@ -440,6 +440,19 @@ private:
     if ([[NSUserDefaults standardUserDefaults] integerForKey:@"keyboardMonitorMode"]) {
         currentConfig.keyboardMonitorMode = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"keyboardMonitorMode"];
     }
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"mainWindowRect"]) {
+        [window frame] = NSRectFromString([[NSUserDefaults standardUserDefaults] stringForKey:@"mainWindowRect"]);
+    }
+    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"mainWindowAlwaysOnTop"]) {
+        userState.mainWindowAlwaysOnTop = true;
+        [menuMainWindowAlwaysOnTop setState:NSOnState];
+        [window setLevel:NSFloatingWindowLevel];
+    } else {
+        userState.mainWindowAlwaysOnTop = false;
+        [menuMainWindowAlwaysOnTop setState:NSOffState];
+        [window setLevel:NSNormalWindowLevel];
+    }
+    
 }
 
 -(void)setupValues {
@@ -1397,6 +1410,27 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [self updateKBMappings];
 }
 
+-(IBAction)clickedMenuMainWindowAlwaysOnTop:(NSMenuItem*)sender {
+    userState.mainWindowAlwaysOnTop = !userState.mainWindowAlwaysOnTop;
+    if (userState.mainWindowAlwaysOnTop) {
+        [sender setState:NSOnState];
+        [window setLevel:NSFloatingWindowLevel];
+    } else {
+        [sender setState:NSOffState];
+        [window setLevel:NSNormalWindowLevel];
+    }
+    
+}
+
+-(IBAction)clickedMenuMoveToCenterOfMainMonitor:(NSMenuItem*)sender {
+    NSRect mainDisplayRect = [[NSScreen mainScreen] frame];
+    NSRect currentWindowRect = [window frame];
+    mainDisplayRect.origin.y = (mainDisplayRect.size.height/2) - (currentWindowRect.size.height/2);
+    mainDisplayRect.origin.x = (mainDisplayRect.size.width/2) - (currentWindowRect.size.width/2);
+    [window setFrame:mainDisplayRect display:YES];
+    
+}
+
 -(void)updateMixerCurrentStatus {
     if (mixerCurrentStatus.Connected) {
         /*
@@ -2088,6 +2122,12 @@ NSMutableArray* makeEmptyNSStringNSArray(int size) {
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.ColorB forKey:@"ColorB"];
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.slidingRate forKey:@"slidingRate"];
     [[NSUserDefaults standardUserDefaults] setInteger:currentConfig.keyboardMonitorMode forKey:@"keyboardMonitorMode"];
+    [[NSUserDefaults standardUserDefaults] setValue:NSStringFromRect([window frame]) forKey:@"mainWindowRect"];
+    if (userState.mainWindowAlwaysOnTop) {
+        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"mainWindowAlwaysOnTop"];
+    } else {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"mainWindowAlwaysOnTop"];
+    }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
